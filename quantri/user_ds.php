@@ -30,10 +30,8 @@
                                  <th>idUser</th>
                                 <th>Họ Tên</th>
                                 <th>User Name</th>
-                                <th>Password</th>
                                 <th>Địa chỉ</th>
                                 <th>Email</th>
-                                <th>Điện Thoại</th>
                                 <th>Cập nhật/Xóa</th>
                             </tr>
                             </thead>
@@ -45,13 +43,11 @@
                                 <td><?=$rowTL['idUser']?></td>
                                 <td><?=$rowTL['HoTen']?></td>
                                 <td><?=$rowTL['Username']?></td>
-                                <td><?=$rowTL['Password']?></td>
                                 <td><?=$rowTL['DiaChi']?></td>
                                 <td><?=$rowTL['Email']?></td>
-                                <td><?=$rowTL['DienThoai']?></td>
                                 <td>
-                                    <a href="?p=theloai_sua&idTL=<?=$rowTL['idTL']?>" class="btn bg-blue waves-effect">Cập nhật</a> &nbsp;
-                                    <a href="theloai_xoa.php?idTL=<?=$rowTL['idTL']?>" class="btn bg-red waves-effect" onClick="return confirm('Xóa hả')">Xóa</a>
+                                    <a href="?p=user_sua&idUser=<?=$rowTL['idUser']?>" class="btn bg-blue waves-effect">Chỉnh</a> &nbsp;
+                                    <a href="user_xoa.php?idUser=<?=$rowTL['idUser']?>" class="btn bg-red waves-effect" onClick="return confirm('Xóa hả')">Xóa</a>
 
                                 </td>
                             </tr>

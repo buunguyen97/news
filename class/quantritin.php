@@ -268,5 +268,52 @@ class quantritin extends goc{
         if(!$kq) die( $this-> db->error);
         return $kq;
     }
+    function User_Them($Ten, $user,$Pasword, $DiaChi, $email){
 
+        $Ten = $this ->db->escape_string(trim(strip_tags($Ten)));
+        $user = $this ->db->escape_string(trim(strip_tags($user)));
+        $DiaChi = $this ->db->escape_string(trim(strip_tags($DiaChi)));
+        if (!$email || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            echo "loi"; exit;
+        }
+        $Password = trim(strip_tags($Pasword));
+        $Password = md5($Password);
+        $sql="INSERT INTO users SET HoTen = '$Ten',Username = '$user',Password = '$Password',DiaChi = '$DiaChi',Email ='$email'";
+        $this->db->escape_string($sql);
+        $kq= $this->db->query($sql) ;
+        if(!$kq) die( $this->db->error);
+    }
+    function User_Chitiet($idUser){
+        $sql="SELECT * FROM users WHERE idUser=$idUser";
+        $kq = $this->db->query($sql) ;
+        if(!$kq) die( $this-> db->error);
+        $row = $kq->fetch_assoc();
+        return $row;
+    }
+    function User_Sua($Ten,$Pasword, $DiaChi, $email,$idUser){
+
+        $Ten = $this ->db->escape_string(trim(strip_tags($Ten)));
+        // $user = $this ->db->escape_string(trim(strip_tags($user)));
+        $DiaChi = $this ->db->escape_string(trim(strip_tags($DiaChi)));
+        if (!$email || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            echo "Email không đúng !"; exit;
+        }
+        $Password = trim(strip_tags($Pasword));
+        $Password = md5($Password);
+        $sql="UPDATE users SET HoTen = '$Ten',Password = '$Password',DiaChi = '$DiaChi',Email ='$email' 
+        WHERE idUser='$idUser'";
+        $this->db->escape_string($sql);
+        $kq= $this->db->query($sql) ;
+        if(!$kq) die( $this->db->error);
+    }
+    function UserName(){
+        $sql="SELECT Username FROM users";
+        $kq= $this->db->query($sql) ;
+        return $kq;
+    }
+    function User_Xoa($idUser){
+        settype($idUser,"int"); $sql="DELETE FROM users WHERE idUser=$idUser";
+        $kq= $this->db->query($sql) ;
+        if(!$kq) die( $this-> db->error);
+    }
 }

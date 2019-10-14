@@ -38,6 +38,8 @@ $qt-> checkLogin(); //chuy盻ハ qua login.php n蘯ｿu chﾆｰa ﾄ惰ハg nh蘯ｷp or kﾃｴ lﾃ
 
     <!-- Custom Css -->
     <link href="css/style.css" rel="stylesheet">
+    
+    <link href="css/thongbao.css" rel="stylesheet">
 
     <!-- AdminBSB Themes. You can choose a theme from css/themes instead of get all themes -->
     <link href="css/themes/all-themes.css" rel="stylesheet" />
@@ -45,21 +47,21 @@ $qt-> checkLogin(); //chuy盻ハ qua login.php n蘯ｿu chﾆｰa ﾄ惰ハg nh蘯ｷp or kﾃｴ lﾃ
 
 <body class="theme-red">
     <!-- Page Loader -->
-    <div class="page-loader-wrapper">
-        <div class="loader">
-            <div class="preloader">
-                <div class="spinner-layer pl-red">
-                    <div class="circle-clipper left">
-                        <div class="circle"></div>
-                    </div>
-                    <div class="circle-clipper right">
-                        <div class="circle"></div>
-                    </div>
-                </div>
-            </div>
-            <p>Please wait...</p>
-        </div>
-    </div>
+<!--    <div class="page-loader-wrapper">-->
+<!--        <div class="loader">-->
+<!--            <div class="preloader">-->
+<!--                <div class="spinner-layer pl-red">-->
+<!--                    <div class="circle-clipper left">-->
+<!--                        <div class="circle"></div>-->
+<!--                    </div>-->
+<!--                    <div class="circle-clipper right">-->
+<!--                        <div class="circle"></div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <p>Please wait...</p>-->
+<!--        </div>-->
+<!--    </div>-->
     <!-- #END# Page Loader -->
     <!-- Overlay For Sidebars -->
     <div class="overlay"></div>
@@ -473,11 +475,14 @@ $qt-> checkLogin(); //chuy盻ハ qua login.php n蘯ｿu chﾆｰa ﾄ惰ハg nh蘯ｷp or kﾃｴ lﾃ
     </section>
 
     <section class="content">
+        <!-- <div class='text-center login'>
+            <p id="login">ﾄ斉ハg nh蘯ｭp thﾃnh cﾃｴng!</p>
+        </div> -->
         <?php
         if(isset($_SESSION['login'])== 1){
             echo"
                     <div class='text-center login'>
-                        <p style='    font-size: 17px;background: #28a745;width: 300px;margin: auto;    height: 40px; line-height: 40px;color: #ffff;border-radius: 20px;'>
+                        <p id='login' >
                                ﾄ斉ハg nh蘯ｭp thﾃnh cﾃｴng !!!!
                         </p>
                     </div>
@@ -512,7 +517,7 @@ $qt-> checkLogin(); //chuy盻ハ qua login.php n蘯ｿu chﾆｰa ﾄ惰ハg nh蘯ｷp or kﾃｴ lﾃ
     <script src="plugins/bootstrap/js/bootstrap.js"></script>
 
     <!-- Select Plugin Js -->
-    <script src="plugins/bootstrap-select/js/bootstrap-select.js"></script>
+    <!-- <script src="plugins/bootstrap-select/js/bootstrap-select.js"></script> -->
 
     <!-- Slimscroll Plugin Js -->
     <script src="plugins/jquery-slimscroll/jquery.slimscroll.js"></script>

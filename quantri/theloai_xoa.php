@@ -12,14 +12,14 @@ $dem = $qt->DemTheLoaiTrongTin($idTL);
 
  if($dem > 0){
 
-        $_SESSION['theloai_xoa']="Không thể xóa !!! ";
+        $_SESSION['theloai_xoa']=0;
         header("location:index.php?p=theloai_ds");
 
 
  }
  else{
      $kq = $qt->TheLoai_Xoa($idTL);
-     $_SESSION['theloai_xoa']="Xóa Thành Công !!!";
+     $_SESSION['theloai_xoa']=1;
      header("location:index.php?p=theloai_ds");
  }
 

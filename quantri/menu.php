@@ -46,7 +46,7 @@
         </a>
         <ul class="ml-menu">
             <li> <a href="?p=user_them">Thêm users</a> </li>
-            <li> <a href="?p=_ds">Danh sách users </a> </li>
+            <li> <a href="?p=user_ds">Danh sách users </a> </li>
         </ul>
     </li>
     <li>

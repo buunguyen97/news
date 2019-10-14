@@ -8,6 +8,37 @@ $(function () {
         setSkinListHeightAndScroll(false);
         setSettingListHeightAndScroll(false);
     });
+
+    setTimeout(function(){
+        $("#login").html("");    
+        }, 3000);
+
+
+    $('#User_Name').focusout(function (e) {
+        var checkformUrl = "checkdatauser.php";
+        var val = $(this).val();
+        if(val.trim()){
+            $.ajax({
+                url: checkformUrl,
+                type: 'POST',
+                data: {username: val},
+                success: function(result) {
+                    if(result.result == 'co'){                        
+                        $("#thongbao_username").html("Username tồn tại!!!");
+                        $("#thongbao_username").addClass("thongbao");
+                        $("#User_Name").select();
+                    }
+                    else  {
+                        $("#thongbao_username").html("");
+                        $("#thongbao_username").removeClass("thongbao");
+                    }
+                },
+                error: function () {
+                    console.log('aaaaaaaaaaaaaa')
+                }
+            });
+        }
+    });
 });
 
 //Skin changer
@@ -105,3 +136,4 @@ function loadTracking() {
     ga('send', 'pageview');
 }
 //========================================================================================================
+
