@@ -68,7 +68,7 @@ if (isset($_POST['TieuDe'])){
                     </div>
                     <div class="form-group form-float">
                         <div class="form-line">
-                            <textarea name="TomTat" cols="30" rows="5" class="form-control no-resize" placeholder="Tóm Tắt">><?=$row['TomTat']?></textarea>
+                            <textarea name="TomTat" cols="30" rows="5" class="form-control no-resize" placeholder="Tóm Tắt"><?=$row['TomTat']?></textarea>
 
                         </div>
                     </div>

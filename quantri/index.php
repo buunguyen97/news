@@ -303,7 +303,7 @@ $qt-> checkLogin(); //chuy盻ハ qua login.php n蘯ｿu chﾆｰa ﾄ惰ハg nh蘯ｷp or kﾃｴ lﾃ
                             <li><a href="javascript:void(0);"><i class="material-icons">shopping_cart</i>Sales</a></li>
                             <li><a href="javascript:void(0);"><i class="material-icons">favorite</i>Likes</a></li>
                             <li role="seperator" class="divider"></li>
-                            <li><a href="javascript:void(0);"><i class="material-icons">input</i>Sign Out</a></li>
+                            <li><a href="thoat.php"><i class="material-icons">input</i>Sign Out</a></li>
                         </ul>
                     </div>
                 </div>
@@ -480,15 +480,26 @@ $qt-> checkLogin(); //chuy盻ハ qua login.php n蘯ｿu chﾆｰa ﾄ惰ハg nh蘯ｷp or kﾃｴ lﾃ
         </div> -->
         <?php
         if(isset($_SESSION['login'])== 1){
-            echo"
-                    <div class='text-center login'>
+            echo"<div>
+                    <div class='login' id='removelogin'>
                         <p id='login' >
                                ﾄ斉ハg nh蘯ｭp thﾃnh cﾃｴng !!!!
                         </p>
                     </div>
-                    
+                 </div>  
                     ";
             unset($_SESSION['login']);
+        }
+        if(isset($_SESSION['success'])== 1){
+            echo"<div>
+                    <div class='login' id='removelogin'>
+                        <p id='login' >
+                               Xﾃｳa thﾃnh cﾃｴng !!!!
+                        </p>
+                    </div>
+                 </div>  
+                    ";
+            unset($_SESSION['success']);
         }
 
         ?>
@@ -506,6 +517,8 @@ $qt-> checkLogin(); //chuy盻ハ qua login.php n蘯ｿu chﾆｰa ﾄ惰ハg nh蘯ｷp or kﾃｴ lﾃ
                 case "user_ds": require "user_ds.php"; break;
                 case "user_them": require "user_them.php"; break;
                 case "user_sua": require "user_sua.php"; break;
+                case "ykien_ds": require "ykien_ds.php"; break;
+                case "ykien_sua": require "ykien_sua.php"; break;
                 default: require "dashboard.php";
             }
         ?>

@@ -316,4 +316,35 @@ class quantritin extends goc{
         $kq= $this->db->query($sql) ;
         if(!$kq) die( $this-> db->error);
     }
+    function ListYKien(){
+        $sql="SELECT idYKien,Ngay,NoiDung,Email,HoTen FROM ykien ORDER BY idYkien";
+        $kq = $this->db->query($sql) ;
+        if(!$kq) die( $this-> db->error);
+        return $kq;
+    }
+    function YKien_Chitieet($idyKien){
+        $sql = "SELECT * FROM ykien where idYKien = $idyKien";
+        $kq = $this ->db->query($sql);
+        if(!$kq) die($this->db->error);
+        $row =$kq->fetch_assoc();
+        return $row;
+    }
+    function YKien_Sua($idYKien,$noidung,$email){
+
+        $noidung = trim(strip_tags($noidung));
+        if (!$email || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            echo "Email không đúng !"; exit;
+        }
+        $sql="UPDATE ykien SET NoiDung = '$noidung',Email ='$email' 
+        WHERE idYKien='$idYKien'";
+        $this->db->escape_string($sql);
+        $kq= $this->db->query($sql) ;
+        if(!$kq) die( $this->db->error);
+    }
+    function YKien_Xoa($idYKien){
+        settype($idYKien,"int");
+        $sql="DELETE FROM ykien WHERE idYKien = $idYKien";
+        $kq= $this->db->query($sql) ;
+        if(!$kq) die( $this-> db->error);
+    }
 }

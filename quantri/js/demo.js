@@ -10,8 +10,10 @@ $(function () {
     });
 
     setTimeout(function(){
-        $("#login").html("");    
+        $("#login").html("");
+        $("#removelogin").removeClass("login");
         }, 3000);
+
 
 
     $('#User_Name').focusout(function (e) {

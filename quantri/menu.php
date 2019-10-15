@@ -50,6 +50,15 @@
         </ul>
     </li>
     <li>
+        <a href="javascript:void(0);" class="menu-toggle">
+            <i class="material-icons">view_list</i> <span>Ý Kiến</span>
+        </a>
+        <ul class="ml-menu">
+
+            <li> <a href="?p=ykien_ds">Danh sách ý kiến </a> </li>
+        </ul>
+    </li>
+    <li>
         <a href="thoat.php">
             <i class="material-icons">text_fields</i>
             <span>Thoát</span>
