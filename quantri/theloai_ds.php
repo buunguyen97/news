@@ -1,28 +1,4 @@
-<?php
-         if(isset($_SESSION['theloai_xoa']) == 1){
-            echo"
-                    <div class='text-center login'>
-                        <p style='    font-size: 17px;background: #28a745;width: 300px;margin: auto;    height: 40px; line-height: 40px;color: #ffff;border-radius: 20px;'>
-                               Xóa không thành công !!!!
-                        </p>
-                    </div>
-                    
-                    ";
-            unset($_SESSION['login']);
-        }
-        else{
-            echo"
-            <div class='text-center login'>
-                <p style='    font-size: 17px;background: #28a745;width: 300px;margin: auto;    height: 40px; line-height: 40px;color: #ffff;border-radius: 20px;'>
-                       Xóa thành công !!!!
-                </p>
-            </div>
-            
-            ";
-             unset($_SESSION['login']);
-        }
 
-?>
 <div class="container-fluid">
 
     <!-- Basic Examples -->

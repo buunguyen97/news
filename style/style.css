@@ -379,6 +379,7 @@ h6
 .header h1 a
 {	
 	color: #ED1C24;
+	font-size: 50px;
 }
 .header h4
 {
@@ -4153,3 +4154,51 @@ body.lock-position
 	width: 100%;
 	height: 100%;
 }
+.hinhtinnoibattt { height: 160px; }
+.tieudetinnoibattt {height: 45px;  overflow: hidden;}
+/*Tin mới nhất*/
+.tinmoinhat .with_number a {
+	height: 48px; overflow: hidden;
+	font-size: 20px; line-height: 24px;
+}
+.tinmoinhat .post_details {
+	margin-top:0; text-transform:uppercase;
+}
+.tinmoinhat .post_details+p {
+	height: 65px; padding:0;
+	font-size:16px;
+	overflow: hidden;
+	text-align: justify;
+}
+.tinmoinhat a.comments_number {
+	padding-bottom:0;
+	height: 38px;
+}
+.tinmoinhat h2 {margin-top:5px;}
+.tinmoinhat a img {
+	height:200px;
+	border: 1px solid #aaa;
+}
+/*tin mới trong loại*/
+.tinmoinhattrongloai {margin:0!important}
+.tinmoinhattrongloai img {height: 180px; width:330px}
+.tinmoitieptheo {margin:0; white-space:nowrap; margin-bottom:20px;}
+/*tin ngẫu nhieen */
+.tinngaunhien {margin-bottom:20px;}
+.tinngaunhien img {   width:90px!important; height:80px!important; border:1px solid #aaa;
+}
+/*tin Xe nhiều */
+.tinxemnhieu a img { height:170px; border:1px solid #aaa}
+.tinxemnhieu h5 {height:45px; overflow:hidden;font-size:17px }
+/*tin mới phản hồi */
+.tinmoiphanhoi a img { height:170px; border:1px solid #aaa}
+.tinmoiphanhoi h5 {height:45px; overflow:hidden;font-size:17px }
+
+.sf-menu li a {font-size:16px;}
+
+
+/* chi tiết tin*/
+.post.single .noidungtin .content_box {width:100%; margin-left:0; margin-top:20px;}
+h1.post_title {font-size:32px; }
+.post.single h3.excerpt {font-size:24px; letter-spacing:1px; text-align:justify}
+.post.single .text {font-size:20px; text-align:justify}
