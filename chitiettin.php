@@ -110,46 +110,31 @@ $t->CapNhatSolanXemTin($idTin);
 </div>
 <div class="row page_margin_top_section">
     <h4 class="box_header">Ý kiến bạn đọc</h4>
-<!--    --><?php
-//    $loi="";
-//    if (isset($_POST['name']) ==true) {
-//        $hoten = $_POST['name'];
-//        $email = $_POST['email'];
-//        $noidung = $_POST['message'];
-//        $idTin = $_POST['idTin'];
-//        $kq= $t->LuuYKien($idTin, $hoten, $email, $noidung, $loi);
-//        if ($loi=="") {
-//            $url= $_SERVER['PHP_SEFT'];
-//            $_SESSION['thongbao']="Cảm ơn bạn, ý kiến đã được ghi nhận";
-//            echo "<script>document.location='{$url}';</script>";
-//            exit();
-//        }
-//    }
-//    ?>
+
+    
+   
+
+<div class="thongbaoYK" id="remove" >
     <p id="thongbao"></p>
-    <div id="thongbaoYK" style="background: #ccc; color:red; text-align:center;line-height:150%; margin-top:10px">
-        <?php
-        if ($loi!="") echo $loi;
-        if (isset($_SESSION['thongbao'])==true) {echo $_SESSION['thongbao'] ; unset($_SESSION['thongbao']); }
-        ?>
-    </div>
+</div>
+
 
     <form class="comment_form margin_top_15" id="comment_form" method="post" action="">
         <input type="hidden" name="idTin" value="<?=$idTin?>">
         <fieldset class="column ">
-            <input class="text_input" name="name" type="text" value="<?=(isset($_POST['name']))?$_POST['name']:''?>" placeholder="Họ tên của bạn *">
+            <input class="text_input" id="name" name="name" type="text" value="<?=(isset($_POST['name']))?$_POST['name']:''?>" placeholder="Họ tên của bạn *">
         </fieldset>
         <fieldset class="column ">
-            <input class="text_input" name="email" type="text" value="<?=(isset($_POST[' email ']))?$_POST['email']:''?>" placeholder="Email của bạn *">
+            <input class="text_input" id="email" name="email" type="text" value="" placeholder="Email của bạn *">
         </fieldset>
 <!--        <fieldset class="column column_1_3">-->
 <!--            <input class="text_input" name="website" type="text" value="Website" placeholder="Website">-->
 <!--        </fieldset>-->
         <fieldset>
-            <textarea name="message" placeholder="Ý kiến của bạn *"><?=(isset($_POST[' message ']))?$_POST['message']:''?></textarea>
+            <textarea id="message" name="message" placeholder="Ý kiến của bạn *"></textarea>
         </fieldset>
         <fieldset>
-            <input type="submit" value="GỬI Ý KIẾN" class="more active">
+            <button id="commentcheck" type="button"  class="more active">GỬI Ý KIẾN</button>
             <a href="#cancel" id="cancel_comment" title="Cancel reply">Cancel reply</a>
         </fieldset>
     </form>

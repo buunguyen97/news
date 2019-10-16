@@ -128,7 +128,7 @@ class tin extends goc{
         if(!$kq) die( 'Lỗi trong hàm ' . __FUNCTION__. '  '. $this-> db->error);
         return $kq;
     }
-    function LuuYKien($idTin, $hoten,$email, $noidung, &$loi){
+    function LuuYKien($idTin, $hoten,$email, $noidung, $loi){
         $loi="";
         settype($idTin, "int");
         $hoten = $this->db->escape_string(trim(strip_tags($hoten)));

@@ -25,6 +25,7 @@ $(function () {
                 type: 'POST',
                 data: {username: val},
                 success: function(result) {
+                    alert(result);
                     if(result.result == 'co'){                        
                         $("#thongbao_username").html("Username tồn tại!!!");
                         $("#thongbao_username").addClass("thongbao");
