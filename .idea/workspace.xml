@@ -2,25 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f01c3d76-822b-43a9-b73d-c7a9c2da9699" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/chitiettin.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/footer1.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/footer2.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/footer3.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/header_top.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/listloaitin.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/listtag.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/menu.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/slider2.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tinmoi.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tinmoicophanhoi.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tinmoitrongloai.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tinngaunhien.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tinxemnhieu.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/checkcomment.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/quantri/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/quantri/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/quantri/.idea/quantri.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/quantri/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chitiettin.php" beforeDir="false" afterPath="$PROJECT_DIR$/chitiettin.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/class/tin.php" beforeDir="false" afterPath="$PROJECT_DIR$/class/tin.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quantri/theloai_ds.php" beforeDir="false" afterPath="$PROJECT_DIR$/quantri/theloai_ds.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/slider.php" beforeDir="false" afterPath="$PROJECT_DIR$/slider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/slider2.php" beforeDir="false" afterPath="$PROJECT_DIR$/slider2.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/style/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tinmoi.php" beforeDir="false" afterPath="$PROJECT_DIR$/tinmoi.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -31,29 +26,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="109" column="38" selection-start-line="109" selection-start-column="38" selection-end-line="109" selection-end-column="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="tin.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/class/tin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="809">
-              <caret line="121" lean-forward="true" selection-start-line="121" selection-end-line="121" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="post.html" pinned="false" current-in-tab="false">
-        <entry file="file://D:/news-source/news-source/pressroom-responsive-news-and-magazine/www/html/post.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="274">
-              <caret line="1012" selection-start-line="1012" selection-end-line="1012" />
+            <state relative-caret-position="860">
+              <caret line="156" lean-forward="true" selection-start-line="156" selection-end-line="156" />
             </state>
           </provider>
         </entry>
@@ -61,53 +38,32 @@
       <file leaf-file-name="chitiettin.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/chitiettin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" column="34" lean-forward="true" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
+            <state relative-caret-position="85">
+              <caret line="110" column="41" lean-forward="true" selection-start-line="110" selection-start-column="41" selection-end-line="110" selection-end-column="41" />
+              <folding>
+                <element signature="n#div#2;n#!!top" />
+                <element signature="n#div#3;n#!!top" />
+                <element signature="e#3844#3858#0#PHP" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#4;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tinngaunhien.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tinngaunhien.php">
+      <file leaf-file-name="test.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/test.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="16" lean-forward="true" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+            <state relative-caret-position="102">
+              <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tinmoitrongloai.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tinmoitrongloai.php">
+      <file leaf-file-name="checkcomment.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/checkcomment.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="23" column="84" selection-start-line="23" selection-start-column="84" selection-end-line="23" selection-end-column="84" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tinmoicophanhoi.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tinmoicophanhoi.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="28" column="25" lean-forward="true" selection-start-line="28" selection-start-column="25" selection-end-line="28" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tinmoi.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/tinmoi.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="30" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tinxemnhieu.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tinxemnhieu.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="80" selection-start-line="11" selection-start-column="80" selection-end-line="11" selection-end-column="80" />
+            <state relative-caret-position="340">
+              <caret line="20" column="2" lean-forward="true" selection-start-line="20" selection-start-column="2" selection-end-line="20" selection-end-column="2" />
             </state>
           </provider>
         </entry>
@@ -115,8 +71,43 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/style/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="806">
-              <caret line="4204" lean-forward="true" selection-start-line="4204" selection-end-line="4204" />
+            <state relative-caret-position="765">
+              <caret line="4208" column="97" selection-start-line="4208" selection-start-column="97" selection-end-line="4208" selection-end-column="97" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="800">
+              <caret line="185" column="18" lean-forward="true" selection-start-line="185" selection-start-column="18" selection-end-line="185" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="post.html" pinned="false" current-in-tab="false">
+        <entry file="file://D:/news-source/news-source/pressroom-responsive-news-and-magazine/www/html/post.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="266">
+              <caret line="1295" column="34" lean-forward="true" selection-start-line="1061" selection-start-column="28" selection-end-line="1295" selection-end-column="34" />
+              <folding>
+                <element signature="n#div#0;n#div#0;n#div#1;n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#0;n#div#0;n#div#1;n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#1;n#div#0;n#div#1;n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#2;n#div#0;n#div#1;n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#3;n#div#0;n#div#1;n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#4;n#div#0;n#div#1;n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="slider.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/slider.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="15" column="77" selection-start-line="15" selection-start-column="77" selection-end-line="15" selection-end-column="77" />
             </state>
           </provider>
         </entry>
@@ -125,12 +116,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>config['backends'</find>
-      <find>urlHinh</find>
-      <find>TieuDe</find>
-      <find>ListLoaiTIn</find>
-      <find>Dem</find>
-      <find>Dashboard</find>
       <find>ul class=&quot;blog column</find>
       <find>Latest Posts</find>
       <find>&lt;ul class=&quot;blog column column_1_2&quot;</find>
@@ -155,6 +140,12 @@
       <find>div class=&quot;post single</find>
       <find>&lt;?php $kq = $t-&gt;TinMoi(2, 2, $lang); include &quot;tinmoi.php&quot;?&gt;</find>
       <find>post.html</find>
+      <find>&lt;div class=&quot;post single&quot;</find>
+      <find>ul class=&quot;blog horizontal_carousel autoplay-1 scroll-1 navigation-1 easing-easeInOutQuint duration-750</find>
+      <find>Leave a Commen</find>
+      <find>Posts Carousel</find>
+      <find>$t</find>
+      <find>thong</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -180,7 +171,6 @@
         <option value="$PROJECT_DIR$/quantri/theloai_ds.php" />
         <option value="$PROJECT_DIR$/quantri/index.php" />
         <option value="$PROJECT_DIR$/quantri/theloai_xoa.php" />
-        <option value="$PROJECT_DIR$/tinmoi.php" />
         <option value="$PROJECT_DIR$/tinmoitrongngay.php" />
         <option value="$PROJECT_DIR$/listloaitin.php" />
         <option value="$PROJECT_DIR$/listtag.php" />
@@ -189,16 +179,20 @@
         <option value="$PROJECT_DIR$/header_top.php" />
         <option value="$PROJECT_DIR$/menu.php" />
         <option value="$PROJECT_DIR$/footer1.php" />
-        <option value="$PROJECT_DIR$/slider2.php" />
         <option value="D:/news-source/news-source/pressroom-responsive-news-and-magazine/www/html/post.html" />
-        <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/style/style.css" />
         <option value="$PROJECT_DIR$/tinxemnhieu.php" />
-        <option value="$PROJECT_DIR$/class/tin.php" />
-        <option value="$PROJECT_DIR$/chitiettin.php" />
         <option value="$PROJECT_DIR$/tinngaunhien.php" />
         <option value="$PROJECT_DIR$/tinmoitrongloai.php" />
         <option value="$PROJECT_DIR$/tinmoicophanhoi.php" />
+        <option value="$PROJECT_DIR$/tinmoi.php" />
+        <option value="$PROJECT_DIR$/slider2.php" />
+        <option value="$PROJECT_DIR$/slider.php" />
+        <option value="$PROJECT_DIR$/style/style.css" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/js/test.js" />
+        <option value="$PROJECT_DIR$/class/tin.php" />
+        <option value="$PROJECT_DIR$/chitiettin.php" />
+        <option value="$PROJECT_DIR$/checkcomment.php" />
       </list>
     </option>
   </component>
@@ -247,7 +241,7 @@
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="&lt;input type=&quot;text&quot; class=&quot;form-control&quot; name=&quot;&#9;null&#9;null" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/quantri" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
@@ -286,12 +280,12 @@
       <workItem from="1570586639777" duration="19265000" />
       <workItem from="1571020653622" duration="450000" />
       <workItem from="1571044214829" duration="8729000" />
-      <workItem from="1571130243877" duration="12760000" />
+      <workItem from="1571130243877" duration="23547000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43415000" />
+    <option name="totallyTimeSpent" value="54202000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -325,27 +319,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/quantri/loaitin_them.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="2" lean-forward="true" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/quantri/loaitin_xoa.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/quantri/dashboard.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="30" column="69" selection-start-line="30" selection-start-column="69" selection-end-line="30" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/quantri/dashboard.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
@@ -442,13 +415,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/quantri/checkdatauser.php">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/quantri/js/demo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="40" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../sell/ad/class/goc.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -584,62 +550,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/slider.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/slider2.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/news-source/news-source/pressroom-responsive-news-and-magazine/www/html/post.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="1012" selection-start-line="1012" selection-end-line="1012" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="109" column="38" selection-start-line="109" selection-start-column="38" selection-end-line="109" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tinxemnhieu.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="80" selection-start-line="11" selection-start-column="80" selection-end-line="11" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/style/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="806">
-          <caret line="4204" lean-forward="true" selection-start-line="4204" selection-end-line="4204" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/class/tin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="809">
-          <caret line="121" lean-forward="true" selection-start-line="121" selection-end-line="121" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chitiettin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="34" lean-forward="true" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tinngaunhien.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="16" lean-forward="true" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -659,8 +573,112 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tinmoi.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="30" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
+        <state relative-caret-position="323">
+          <caret line="19" column="13" lean-forward="true" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/slider2.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="65" selection-start-line="8" selection-start-column="65" selection-end-line="8" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/slider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="77" selection-start-line="15" selection-start-column="77" selection-end-line="15" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/news-source/news-source/pressroom-responsive-news-and-magazine/www/html/post.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="1295" column="34" lean-forward="true" selection-start-line="1061" selection-start-column="28" selection-end-line="1295" selection-end-column="34" />
+          <folding>
+            <element signature="n#div#0;n#div#0;n#div#1;n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#div#0;n#div#1;n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#1;n#div#0;n#div#1;n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#2;n#div#0;n#div#1;n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#3;n#div#0;n#div#1;n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#4;n#div#0;n#div#1;n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/style/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="765">
+          <caret line="4208" column="97" selection-start-line="4208" selection-start-column="97" selection-end-line="4208" selection-end-column="97" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quantri/js/demo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="40" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="44" lean-forward="true" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/class/tin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="860">
+          <caret line="156" lean-forward="true" selection-start-line="156" selection-end-line="156" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="800">
+          <caret line="185" column="18" lean-forward="true" selection-start-line="185" selection-start-column="18" selection-end-line="185" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tinngaunhien.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="34" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chitiettin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="110" column="41" lean-forward="true" selection-start-line="110" selection-start-column="41" selection-end-line="110" selection-end-column="41" />
+          <folding>
+            <element signature="n#div#2;n#!!top" />
+            <element signature="n#div#3;n#!!top" />
+            <element signature="e#3844#3858#0#PHP" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#4;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/checkcomment.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="2" lean-forward="true" selection-start-line="20" selection-start-column="2" selection-end-line="20" selection-end-column="2" />
         </state>
       </provider>
     </entry>

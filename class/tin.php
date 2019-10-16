@@ -119,6 +119,41 @@ class tin extends goc{
         $sql = "UPDATE tin SET SolanXem = SoLanXem+1 WHERE idTin = $idTin";
         $this->db->query($sql);
     }
+    function TinCuCungLoai($idTin, $lang, $sotin = 5){
+        $sql="SELECT idTin, TieuDe, TomTat, urlHinh, Ngay, SoLanXem  FROM  tin 
+	WHERE AnHien = 1 AND idTin<$idTin AND  lang ='$lang' 
+	AND idLT = (SELECT idLT FROM tin WHERE idTin = $idTin)
+	ORDER BY idTin DESC  LIMIT 0, $sotin";
+        $kq = $this->db-> query($sql);
+        if(!$kq) die( 'Lỗi trong hàm ' . __FUNCTION__. '  '. $this-> db->error);
+        return $kq;
+    }
+    function LuuYKien($idTin, $hoten,$email, $noidung, &$loi){
+        $loi="";
+        settype($idTin, "int");
+        $hoten = $this->db->escape_string(trim(strip_tags($hoten)));
+        $email = $this->db->escape_string(trim(strip_tags($email)));
+        $noidung = $this->db->escape_string(trim(strip_tags($noidung)));
+        if ($hoten=="") $loi.="Ban chưa nhập họ tên<br>";
+        if ($email=="") $loi.="Ban chưa nhập email<br>";
+        if ($noidung=="") $loi.="Ban chưa nhập nội dung ý kiến<br>";
+        if (strlen($noidung)<10) $loi.="Nội dung ý kiến quá ngắn<br>";
+        if ($loi!="") return FALSE;
+
+        $sql="INSERT INTO ykien (idTin, HoTen, Email, NoiDung, Ngay) VALUES 
+   ($idTin,'$hoten', '$email', '$noidung', NOW())";
+        $kq = $this->db-> query($sql);
+        if(!$kq) die( 'Lỗi trong hàm ' . __FUNCTION__. '  '. $this-> db->error);
+        return $kq;
+    }
+    function LayCacYKienCua1Tin($idTin){
+        $sql="SELECT idYKien, HoTen, NoiDung, Ngay FROM  ykien  
+	WHERE AnHien = 1 AND idTin=$idTin  
+	ORDER BY Ngay DESC";
+        $kq = $this->db-> query($sql);
+        if(!$kq) die( 'Lỗi trong hàm ' . __FUNCTION__. '  '. $this-> db->error);
+        return $kq;
+    }
 
 
 }//tin

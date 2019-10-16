@@ -203,5 +203,6 @@
 		<script type="text/javascript" src="js/jquery.blockUI.js"></script>
 		<script type="text/javascript" src="js/main.js"></script>
 		<script type="text/javascript" src="js/odometer.min.js"></script>
+		<script type="text/javascript" src="js/test.js"></script>
 	</body>
 </html>
