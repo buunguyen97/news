@@ -1,6 +1,7 @@
 $(function () {
 
-
+    var dNow = new Date();
+    var localdate= dNow.getDate() + '/' + (dNow.getMonth()+ 1) + '/' + dNow.getFullYear() + ' ' + dNow.getHours() + ':' + dNow.getMinutes()+ ':' + dNow.getSeconds();
     $("#remove").removeClass("thongbaoYK");
 
     $('#commentcheck').click(function (e) {
@@ -13,10 +14,21 @@ $(function () {
         var name = $("#name").val();
         var email = $("#email").val();
         var message = $("#message").val();
-        if (name=="") { alert("Chưa nập tên"); return false;}
-        if (email=="") { alert("Chưa nập tên"); return false;}
-        if (message=="") { alert("Chưa nập tên"); return false;}
-        
+
+        if (name=="") {
+            $("#themname").html("Ban chưa nhập họ tên");
+            $("#themname").addClass("thongbao");
+            $("#name").select();
+            return false;}
+        if (email=="") {
+            $("#thememail").html("Ban chưa nhập email");
+            $("#thememail").addClass("thongbao");
+            $("#email").select(); return false;}
+        if (message=="") {
+            $("#themykien").html("Ban chưa nhập nội dung ý kiến");
+            $("#themykien").addClass("thongbao");
+            $("#message").select(); return false;}
+
         $.ajax({
             url: checkformUrl,
             type: 'POST',
@@ -26,13 +38,17 @@ $(function () {
                 if(result.result == 'co'){
                     $("#thongbao").html("Cảm ơn bạn, ý kiến đã được ghi nhận.");
                     $("#remove").addClass("thongbaoYK");
+                    $("#commentthem").removeClass("binhluan");
+                    $("#namethem").html(name);
+                    $("#thembinhluan").html(message);
+                    $("#time").html(localdate);
                 }
 
             },
             error: function () {
                 console.log('aaaaaaaaaaaaaa')
             }
-        });    
+        });
     });
 
 });

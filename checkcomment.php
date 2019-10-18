@@ -10,9 +10,8 @@ if (isset($_POST['name']) ==true) {
     $noidung = $_POST['message'];
     $idTin = $_POST['idTin']; 		
     $kq= $t->LuuYKien($idTin, $hoten, $email, $noidung, $loi);
-    if ($loi=="") { 
-        $url= $_SERVER['PHP_SEFT'];			
-        $_SESSION['thongbao']="Cảm ơn bạn, ý kiến đã được ghi nhận";
+    if ($loi=="") {
+        $_SESSION['thongbao']=1;
         $data =  ['result' => 'co'];
 
     }

@@ -22,7 +22,7 @@ $t->CapNhatSolanXemTin($idTin);
                 <h3 class="excerpt"><?=$row['TomTat']?>.</h3>
                 <div class="text">
                     <?=$row['Content']?>
-                    Posts Carousel                 </div>
+                </div>
             </div>
 
         </div>
@@ -122,16 +122,19 @@ $t->CapNhatSolanXemTin($idTin);
     <form class="comment_form margin_top_15" id="comment_form" method="post" action="">
         <input type="hidden" name="idTin" value="<?=$idTin?>">
         <fieldset class="column ">
-            <input class="text_input" id="name" name="name" type="text" value="<?=(isset($_POST['name']))?$_POST['name']:''?>" placeholder="Họ tên của bạn *">
+            <input class="text_input" id="name" name="name" type="text" required placeholder="Họ tên của bạn">
+            <p id="themname"></p>
         </fieldset>
         <fieldset class="column ">
-            <input class="text_input" id="email" name="email" type="text" value="" placeholder="Email của bạn *">
+            <input class="text_input" id="email" name="email" type="text" required placeholder="Email của bạn ">
+            <p id="thememail"></p>
         </fieldset>
 <!--        <fieldset class="column column_1_3">-->
 <!--            <input class="text_input" name="website" type="text" value="Website" placeholder="Website">-->
 <!--        </fieldset>-->
         <fieldset>
             <textarea id="message" name="message" placeholder="Ý kiến của bạn *"></textarea>
+            <p id="themykien"></p>
         </fieldset>
         <fieldset>
             <button id="commentcheck" type="button"  class="more active">GỬI Ý KIẾN</button>
@@ -141,9 +144,22 @@ $t->CapNhatSolanXemTin($idTin);
 </div>
 <div class="row page_margin_top_section">
     <?php $kq= $t->LayCacYKienCua1Tin($idTin); ?>
-    <h4 class="box_header"> <?=$kq->num_rows; ?> ý kiến</h4>
+    <h4 class="box_header"> <?=$kq->num_rows; ?>   Ý kiến </h4>
 
     <ul id="comments_list">
+        <li class="comment clearfix binhluan" id="commentthem">
+            <div class="comment_author_avatar">
+                &nbsp;
+            </div>
+            <div class="comment_details">
+                <div class="posted_by clearfix">
+                    <h5><a class="author" id="namethem" href="#"></a></h5>
+                    <abbr id="time" class="timeago"></abbr>
+                </div>
+                <p id="thembinhluan"></p>
+
+            </div>
+        </li>
         <?php while ($row= $kq->fetch_assoc() ) {?>
         <li class="comment clearfix" id="comment-1">
             <div class="comment_author_avatar">
@@ -161,7 +177,9 @@ $t->CapNhatSolanXemTin($idTin);
             </div>
         </li>
         <?php } ?>
+
     </ul>
+
 <!--    <ul class="pagination page_margin_top_section">-->
 <!--        <li class="left">-->
 <!--            <a href="#" title="">&nbsp;</a>-->

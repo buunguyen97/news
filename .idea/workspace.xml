@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/chitiettin.php" line="143" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="f01c3d76-822b-43a9-b73d-c7a9c2da9699" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkcomment.php" beforeDir="false" afterPath="$PROJECT_DIR$/checkcomment.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chitiettin.php" beforeDir="false" afterPath="$PROJECT_DIR$/chitiettin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/menu.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/quantri/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/quantri/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style/style.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,8 +25,8 @@
       <file leaf-file-name="tin.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/class/tin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="860">
-              <caret line="156" lean-forward="true" selection-start-line="156" selection-end-line="156" />
+            <state relative-caret-position="418">
+              <caret line="97" column="39" lean-forward="true" selection-start-line="97" selection-start-column="39" selection-end-line="97" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -26,21 +34,21 @@
       <file leaf-file-name="chitiettin.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/chitiettin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="110" column="41" lean-forward="true" selection-start-line="110" selection-start-column="41" selection-end-line="110" selection-end-column="41" />
+            <state relative-caret-position="113">
+              <caret line="137" column="19" lean-forward="true" selection-start-line="137" selection-start-column="19" selection-end-line="137" selection-end-column="19" />
               <folding>
                 <element signature="n#div#2;n#!!top" />
-                <element signature="n#div#3;n#!!top" />
+                <element signature="e#5340#5346#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/js/test.js">
+      <file leaf-file-name="menu.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/menu.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="403">
-              <caret line="32" column="45" lean-forward="true" selection-start-line="32" selection-start-column="45" selection-end-line="32" selection-end-column="45" />
+            <state relative-caret-position="809">
+              <caret line="70" column="6" lean-forward="true" selection-start-line="66" selection-start-column="25" selection-end-line="70" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -48,8 +56,8 @@
       <file leaf-file-name="checkcomment.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/checkcomment.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="21" column="2" lean-forward="true" selection-start-line="21" selection-start-column="2" selection-end-line="21" selection-end-column="2" />
+            <state relative-caret-position="221">
+              <caret line="13" column="27" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -57,8 +65,8 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/style/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="765">
-              <caret line="4219" column="1" selection-start-line="4219" selection-start-column="1" selection-end-line="4219" selection-end-column="1" />
+            <state relative-caret-position="666">
+              <caret line="4218" column="22" lean-forward="true" selection-start-line="4218" selection-start-column="22" selection-end-line="4218" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -98,40 +106,49 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="test.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/test.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="22" column="24" lean-forward="true" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>ul class=&quot;blog column</find>
-      <find>Latest Posts</find>
-      <find>&lt;ul class=&quot;blog column column_1_2&quot;</find>
-      <find>h4 class=&quot;box_header page_margin_top_section&quot;&gt;</find>
-      <find>h4 class=&quot;box_header&quot;&gt;Lifestyle&lt;/h4</find>
-      <find>&lt;?php $idLT=3; require &quot;tinmoitrongloai.php&quot;?&gt;</find>
-      <find>&lt;h4 class=&quot;box_header&quot;&gt;Categories&lt;/h4&gt;</find>
-      <find>&lt;?php require &quot;tinngaunhien.php&quot;; ?&gt;</find>
-      <find>&lt;h4 class=&quot;box_header page_margin_top_section&quot;&gt;Tags</find>
-      <find>Featured Videos</find>
-      <find>Top Posts</find>
-      <find>div id=&quot;most-recent&quot;&gt;</find>
-      <find>&lt;div id=&quot;most-read&quot;&gt;</find>
-      <find>&lt;div id=&quot;most-commented</find>
-      <find>&lt;h4 class=&quot;box_header&quot;&gt;About PressRoom&lt;/h4&gt;</find>
+      <find />
+      <find />
+      <find />
+      <find />
+      <find />
+      <find />
+      <find />
+      <find />
+      <find />
+      <find />
+      <find />
+      <find />
+      <find />
+      <find />
       <find>Top</find>
-      <find>&lt;div class=&quot;row copyright</find>
-      <find>&lt;div class=&quot;menu_container clearfix</find>
-      <find>div class=&quot;header_top_</find>
+      <find />
+      <find />
+      <find />
       <find>menu_container</find>
       <find>faca</find>
-      <find>div class=&quot;post single</find>
-      <find>&lt;?php $kq = $t-&gt;TinMoi(2, 2, $lang); include &quot;tinmoi.php&quot;?&gt;</find>
+      <find />
+      <find />
       <find>post.html</find>
-      <find>&lt;div class=&quot;post single&quot;</find>
-      <find>ul class=&quot;blog horizontal_carousel autoplay-1 scroll-1 navigation-1 easing-easeInOutQuint duration-750</find>
-      <find>Leave a Commen</find>
-      <find>Posts Carousel</find>
+      <find />
+      <find />
+      <find />
+      <find />
       <find>$t</find>
       <find>thong</find>
+      <find>hjasdkljaskdljasd</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -163,7 +180,6 @@
         <option value="$PROJECT_DIR$/footer2.php" />
         <option value="$PROJECT_DIR$/footer3.php" />
         <option value="$PROJECT_DIR$/header_top.php" />
-        <option value="$PROJECT_DIR$/menu.php" />
         <option value="$PROJECT_DIR$/footer1.php" />
         <option value="D:/news-source/news-source/pressroom-responsive-news-and-magazine/www/html/post.html" />
         <option value="$PROJECT_DIR$/tinxemnhieu.php" />
@@ -173,12 +189,13 @@
         <option value="$PROJECT_DIR$/tinmoi.php" />
         <option value="$PROJECT_DIR$/slider2.php" />
         <option value="$PROJECT_DIR$/slider.php" />
-        <option value="$PROJECT_DIR$/style/style.css" />
         <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/js/test.js" />
         <option value="$PROJECT_DIR$/class/tin.php" />
-        <option value="$PROJECT_DIR$/chitiettin.php" />
         <option value="$PROJECT_DIR$/checkcomment.php" />
+        <option value="$PROJECT_DIR$/style/style.css" />
+        <option value="$PROJECT_DIR$/js/test.js" />
+        <option value="$PROJECT_DIR$/chitiettin.php" />
+        <option value="$PROJECT_DIR$/menu.php" />
       </list>
     </option>
   </component>
@@ -196,7 +213,7 @@
       <path value="$PROJECT_DIR$/quantri/plugins/tinymce/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
@@ -221,13 +238,7 @@
             <path>
               <item name="news" type="b2602c69:ProjectViewProjectNode" />
               <item name="news" type="462c0819:PsiDirectoryNode" />
-              <item name="quantri" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="news" type="b2602c69:ProjectViewProjectNode" />
-              <item name="news" type="462c0819:PsiDirectoryNode" />
-              <item name="quantri" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="class" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -277,12 +288,12 @@
       <workItem from="1570586639777" duration="19265000" />
       <workItem from="1571020653622" duration="450000" />
       <workItem from="1571044214829" duration="8729000" />
-      <workItem from="1571130243877" duration="25145000" />
+      <workItem from="1571130243877" duration="39931000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55800000" />
+    <option name="totallyTimeSpent" value="70586000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
@@ -296,7 +307,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32271764" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32271764" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -532,13 +543,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/menu.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="45" selection-start-column="45" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/footer1.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
@@ -603,20 +607,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/style/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="4219" column="1" selection-start-line="4219" selection-start-column="1" selection-end-line="4219" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/quantri/js/demo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="40" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -627,13 +617,6 @@
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/class/tin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="860">
-          <caret line="156" lean-forward="true" selection-start-line="156" selection-end-line="156" />
         </state>
       </provider>
     </entry>
@@ -651,28 +634,56 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chitiettin.php">
+    <entry file="file://$PROJECT_DIR$/style/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="110" column="41" lean-forward="true" selection-start-line="110" selection-start-column="41" selection-end-line="110" selection-end-column="41" />
-          <folding>
-            <element signature="n#div#2;n#!!top" />
-            <element signature="n#div#3;n#!!top" />
-          </folding>
+        <state relative-caret-position="666">
+          <caret line="4218" column="22" lean-forward="true" selection-start-line="4218" selection-start-column="22" selection-end-line="4218" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quantri/js/demo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/checkcomment.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="21" column="2" lean-forward="true" selection-start-line="21" selection-start-column="2" selection-end-line="21" selection-end-column="2" />
+        <state relative-caret-position="221">
+          <caret line="13" column="27" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="27" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="403">
-          <caret line="32" column="45" lean-forward="true" selection-start-line="32" selection-start-column="45" selection-end-line="32" selection-end-column="45" />
+        <state relative-caret-position="272">
+          <caret line="22" column="24" lean-forward="true" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chitiettin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="113">
+          <caret line="137" column="19" lean-forward="true" selection-start-line="137" selection-start-column="19" selection-end-line="137" selection-end-column="19" />
+          <folding>
+            <element signature="n#div#2;n#!!top" />
+            <element signature="e#5340#5346#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/class/tin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="97" column="39" lean-forward="true" selection-start-line="97" selection-start-column="39" selection-end-line="97" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/menu.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="809">
+          <caret line="70" column="6" lean-forward="true" selection-start-line="66" selection-start-column="25" selection-end-line="70" selection-end-column="6" />
         </state>
       </provider>
     </entry>

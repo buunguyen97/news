@@ -4218,3 +4218,10 @@ fieldset.column { margin:0; width: 50% }
 	color: black;
     font-weight: bold;
 }
+.thongbao {
+	color: red;
+	font-weight: bold;
+}
+.binhluan{
+	display: none;
+}
