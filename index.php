@@ -91,22 +91,24 @@
 						<div class="column column_2_3">
                             <?php
                             if ($p=="detail") require "chitiettin.php";
+                            else if ($p=="cat") require "tintrongloai.php";
+
                             else {
                             ?>
 
-                            <?php require "slider.php" ?>
-							<div id="small_slider" class='slider_posts_list_container small'>
-							</div>
-							<div class="row page_margin_top">
-								<h4 class="box_header">More Articles</h4>
-								<?php require "slider2.php"?>
-							</div>
-							<h4 class="box_header page_margin_top_section">Tin mới nhất</h4>
-							<div class="row">
-                                <?php $kq = $t->TinMoi(0, 2, $lang); include "tinmoi.php"?>
-                                <?php $kq = $t->TinMoi(2, 2, $lang); include "tinmoi.php"?>
+                                <?php require "slider.php" ?>
+                                <div id="small_slider" class='slider_posts_list_container small'>
+                                </div>
+                                <div class="row page_margin_top">
+                                    <h4 class="box_header">More Articles</h4>
+                                    <?php require "slider2.php"?>
+                                </div>
+                                <h4 class="box_header page_margin_top_section">Tin mới nhất</h4>
+                                <div class="row">
+                                    <?php $kq = $t->TinMoi(0, 2, $lang); include "tinmoi.php"?>
+                                    <?php $kq = $t->TinMoi(2, 2, $lang); include "tinmoi.php"?>
 
-                            </div>
+                                </div>
                             <?php } ?>
 						</div>
 						<div class="column column_1_3">
@@ -160,21 +162,12 @@
 					<div class="row page_margin_top_section">
 						<div class="column column_3_4">
 							<ul class="footer_menu">
+                                <?php $kq = $t->ListTheLoai($lang);	?>
+                                <?php while ($rowTL = $kq->fetch_assoc() ) {?>
 								<li>
-									<h4><a href="category_world.html" title="World">World</a></h4>
+									<h6><a href="category_world.html" title="<?=$rowTL['TenTL']?>"><?=$rowTL['TenTL']?></a></h6>
 								</li>
-								<li>
-									<h4><a href="category_health.html" title="Health">Health</a></h4>
-								</li>
-								<li>
-									<h4><a href="category_sports.html" title="Sports">Sports</a></h4>
-								</li>
-								<li>
-									<h4><a href="category_science.html" title="Science">Science</a></h4>
-								</li>
-								<li>
-									<h4><a href="category_lifestyle.html" title="Lifestyle">Lifestyle</a></h4>
-								</li>
+                                <?php }?>
 							</ul>
 						</div>
 						<div class="column column_1_4">

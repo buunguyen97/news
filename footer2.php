@@ -1,72 +1,27 @@
+<?php $kq = $t->TinNgauNhien(5, $lang);?>
 <div class="column column_1_3">
-    <h4 class="box_header">Latest Posts</h4>
+    <h4 class="box_header">Bạn Xem Chưa</h4>
     <div class="vertical_carousel_container clearfix">
         <ul class="blog small vertical_carousel autoplay-1 scroll-1 navigation-1 easing-easeInOutQuint duration-750">
-            <li class="post">
-                <a href="post_gallery.html" title="Study Linking Illnes and Salt Leaves Researchers Doubtful">
+            <?php while($row = $kq->fetch_assoc() ) { ?>
+            <li class="post tinngaunhien">
+                <a href="index.php?p=detail&idTin=<?=$row['idTin'];?>" title="Study Linking Illnes and Salt Leaves Researchers Doubtful">
                     <span class="icon small gallery"></span>
-                    <img src='images/samples/100x100/image_06.jpg' alt='img'>
+                    <img src='<?=$row['urlHinh']?> ' alt='img' onerror="this.src='/news/defaultImg.jpg'">
                 </a>
                 <div class="post_content">
                     <h5>
-                        <a href="post_gallery.html" title="Study Linking Illnes and Salt Leaves Researchers Doubtful">Study Linking Illnes and Salt Leaves Researchers Doubtful</a>
+                        <a href="index.php?p=detail&idTin=<?=$row['idTin'];?>" title="Study Linking Illnes and Salt Leaves Researchers Doubtful"><?=$row['TieuDe']?> </a>
                     </h5>
                     <ul class="post_details simple">
-                        <li class="category"><a href="category_health.html" title="HEALTH">HEALTH</a></li>
+                        <li class="category"><a href="category_health.html" title="HEALTH"><?=$row['TenLT']?> </a></li>
                         <li class="date">
-                            10:11 PM, Feb 02
+                            <?=date( 'd/m/Y', strtotime($row['Ngay']) )?>
                         </li>
                     </ul>
                 </div>
             </li>
-            <li class="post">
-                <a href="post.html" title="Syrian Civilians Trapped For Months Continue To Be Evacuated">
-                    <img src='images/samples/100x100/image_12.jpg' alt='img'>
-                </a>
-                <div class="post_content">
-                    <h5>
-                        <a href="post.html" title="Syrian Civilians Trapped For Months Continue To Be Evacuated">Syrian Civilians Trapped For Months Continue To Be Evacuated</a>
-                    </h5>
-                    <ul class="post_details simple">
-                        <li class="category"><a href="category_world.html" title="WORLD">WORLD</a></li>
-                        <li class="date">
-                            10:11 PM, Feb 02
-                        </li>
-                    </ul>
-                </div>
-            </li>
-            <li class="post">
-                <a href="post.html" title="Built on Brotherhood, Club Lives Up to Name">
-                    <img src='images/samples/100x100/image_02.jpg' alt='img'>
-                </a>
-                <div class="post_content">
-                    <h5>
-                        <a href="post.html" title="Built on Brotherhood, Club Lives Up to Name">Built on Brotherhood, Club Lives Up to Name</a>
-                    </h5>
-                    <ul class="post_details simple">
-                        <li class="category"><a href="category_sports.html" title="SPORTS">SPORTS</a></li>
-                        <li class="date">
-                            10:11 PM, Feb 02
-                        </li>
-                    </ul>
-                </div>
-            </li>
-            <li class="post">
-                <a href="post.html" title="Nuclear Fusion Closer to Becoming a Reality">
-                    <img src='images/samples/100x100/image_13.jpg' alt='img'>
-                </a>
-                <div class="post_content">
-                    <h5>
-                        <a href="post.html" title="Nuclear Fusion Closer to Becoming a Reality">Nuclear Fusion Closer to Becoming a Reality</a>
-                    </h5>
-                    <ul class="post_details simple">
-                        <li class="category"><a href="category_science.html" title="SCIENCE">SCIENCE</a></li>
-                        <li class="date">
-                            10:11 PM, Feb 02
-                        </li>
-                    </ul>
-                </div>
-            </li>
+            <?php } ?>
         </ul>
     </div>
 </div>

@@ -154,7 +154,25 @@ class tin extends goc{
         if(!$kq) die( 'Lỗi trong hàm ' . __FUNCTION__. '  '. $this-> db->error);
         return $kq;
     }
-
+    function LayCacTags($idTin){
+        $sql ="SELECT tags FROM tin  WHERE idTin=$idTin";
+        $kq = $this->db-> query($sql);
+        if(!$kq) die( 'Lỗi trong hàm ' . __FUNCTION__. '  '. $this-> db->error);
+        return $kq->fetch_assoc();
+    }
+    function LayTheLoaiTrongTin($idTin){
+        $sql ="SELECT TenTL FROM tin,theloai WHERE tin.idTL = theloai.idTL AND idTin =$idTin ";
+        $kq = $this->db-> query($sql);
+        if(!$kq) die( 'Lỗi trong hàm ' . __FUNCTION__. '  '. $this-> db->error);
+        return $kq->fetch_assoc();
+    }
+    function TinTrongLoai($idLT){
+        $sql="SELECT idTin, TieuDe, TomTat, urlHinh, Ngay, SoLanXem
+	FROM  tin WHERE AnHien = 1 AND idLT=$idLT ORDER BY idTin DESC";
+        $kq = $this->db-> query($sql);
+        if(!$kq) die( $this-> db->error);
+        return $kq;
+    }
 
 }//tin
 ?>

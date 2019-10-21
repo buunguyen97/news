@@ -20,7 +20,7 @@
                     <?php while ($rowLT = $kq1->fetch_assoc() ) {?>
 
                     <li>
-                        <a href="category_health.html" title="Health">
+                        <a href="index.php?p=cat&idLT=<?=$rowLT['idLT']?>" title=" <?=$rowLT['Ten'] ?>">
                             <?=$rowLT['Ten'] ?>
                         </a>
                     </li>
@@ -40,7 +40,7 @@
         <nav>
             <ul class="mobile-menu">
                 <li class="submenu selected">
-                    <a href="index.php" title="Home">
+                    <a href="index.php" title=" Trang Chủ">
                         Trang Chủ
                     </a>
 
@@ -55,7 +55,7 @@
                         <?php $kq1 = $t->ListLoaiTinTrong1TheLoai($rowTL['idTL']);?>
                         <?php while ($rowLT = $kq1->fetch_assoc() ) {?>
                             <li>
-                                <a href="category_health.html" title="Health">
+                                <a href="index.php?p=cat&idLT=<?=$rowLT['idLT']?>" title="<?=$rowLT['Ten'] ?>">
                                     <?=$rowLT['Ten'] ?>
                                 </a>
                             </li>

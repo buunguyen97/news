@@ -4,7 +4,7 @@ $kq = $t->TinMoiTrong1Loai($idLT, 0, 1, $lang);
 $row=$kq -> fetch_assoc();
 ?>
 
-<h4 class="box_header">Lifestyle</h4>
+<h4 class="box_header"><?=$tenLT?></h4>
 <ul class="blog small_margin clearfix">
     <li class="post tinmoinhattrongloai">
         <a href="index.php?p=detail&idTin=<?=$row['idTin'];?>" title="The Public Health Crisis Hiding in Our Food">
