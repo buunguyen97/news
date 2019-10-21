@@ -1,12 +1,12 @@
 <?php
-$idLT=$_GET['idLT']; settype($idLT, "int");
+$tukhoa = $_GET['tukhoa'];
 $pageSize = PAGEGINATION_PERPAGE ; //số tin sẽ hiện trong 1 trang
 if (isset($_GET['pageNum'])) $pageNum = $_GET['pageNum'];//trang user xem
 settype($pageNum, "int");
 if ($pageNum<=0) $pageNum=1;
 $totalRows=0;
 $offset = PAGEGINATION_OFFSET;
-$kq = $t->TinTrongLoai($idLT ,$pageNum, $pageSize,$totalRows ); //chỉ lấy 1 trang thứ $pageNum , với $pageSize record
+$kq = $t->TimKiem($tukhoa,$totalRows, $pageNum, $pageSize);
 
 ?>
 <style>
@@ -23,21 +23,11 @@ $kq = $t->TinTrongLoai($idLT ,$pageNum, $pageSize,$totalRows ); //chỉ lấy 1 
 </style>
 <div class="page_header clearfix ">
     <div class="page_header_left">
-        <h1 class="page_title"><?=$t->LayTenLoaiTin($idLT);?> </h1>
+        <h1 class="page_title">KẾT QUẢ TÌm: <?=$tukhoa?>  </h1>
     </div>
     <div class="page_header_right">
         <ul class="bread_crumb">
-            <li>
-                <a title="Home" href="index.php">
-                    Trang chủ
-                </a>
-            </li>
-            <li class="separator icon_small_arrow right_gray">
-                &nbsp;
-            </li>
-            <li>
-                <?=$t->LayTenLoaiTin($idLT);?>
-            </li>
+            <li>Số tin tìm được: <?=$totalRows?> tin</li>
         </ul>
     </div>
 </div>
@@ -79,10 +69,10 @@ $kq = $t->TinTrongLoai($idLT ,$pageNum, $pageSize,$totalRows ); //chỉ lấy 1 
     <?php //Hiện link tới trang đầu, trang trước?>
     <?php if ($pageNum>1) {?>
     <li>
-    <a href="index.php?p=cat&idLT=<?=$idLT?>">Đầu</a>
+    <a href="index.php?p=search&tukhoa=<?=$tukhoa?>">Đầu</a>
     </li>
     <li>
-    <a href="index.php?p=cat&idLT=<?=$idLT?>&pageNum=<?=$pagePrev?>">Trước</a>
+    <a href="index.php?p=search&tukhoa=<?=$tukhoa?>>&pageNum=<?=$pagePrev?>">Trước</a>
     </li>
     <?php } //if ($pageNum>1?>
 
@@ -90,11 +80,11 @@ $kq = $t->TinTrongLoai($idLT ,$pageNum, $pageSize,$totalRows ); //chỉ lấy 1 
     <?php for($j = $from; $j <= $to; $j++) {?>
     <?php if ($j!=$pageNum) {?> 
         <li>
-        <a href="index.php?p=cat&idLT=<?=$idLT?>&pageNum=<?=$j?>"><?=$j?></a>
+        <a href="index.php?p=search&tukhoa=<?=$tukhoa?>&pageNum=<?=$j?>"><?=$j?></a>
         </li>
     <?php } else {?>
         <li  class="selected">
-        <a href="index.php?p=cat&idLT=<?=$idLT?>&pageNum=<?=$j?>"><?=$j?></a>
+        <a href="index.php?p=search&tukhoa=<?=$tukhoa?>&pageNum=<?=$j?>"><?=$j?></a>
         </li>
     <?php } //if ($j?>   
     <?php } //for?>
@@ -103,10 +93,10 @@ $kq = $t->TinTrongLoai($idLT ,$pageNum, $pageSize,$totalRows ); //chỉ lấy 1 
     <?php //Hiện link tới trang trước, trang cuối?>
     <?php if ($pageNum<$totalPages) {?>
     <li>
-    <a href= "index.php?p=cat&idLT=<?=$idLT?>&pageNum=<?=$pageNext?>">Sau</a>
+    <a href= "index.php?p=search&tukhoa=<?=$tukhoa?>&pageNum=<?=$pageNext?>">Sau</a>
     </li>
     <li>
-    <a href="index.php?p=cat&idLT=<?=$idLT?>&pageNum=<?=$totalPages?>">Cuối</a>
+    <a href="index.php?p=search&tukhoa=<?=$tukhoa?>&pageNum=<?=$totalPages?>">Cuối</a>
     </li>
     <?php } //if ($pageNum<$totalPages) ?>
 

@@ -166,13 +166,45 @@ class tin extends goc{
         if(!$kq) die( 'Lỗi trong hàm ' . __FUNCTION__. '  '. $this-> db->error);
         return $kq->fetch_assoc();
     }
-    function TinTrongLoai($idLT){
-        $sql="SELECT idTin, TieuDe, TomTat, urlHinh, Ngay, SoLanXem
-	FROM  tin WHERE AnHien = 1 AND idLT=$idLT ORDER BY idTin DESC";
+
+    function TinTrongLoai($idLT ,$pageNum, $pageSize,&$totalRows ){
+        $startRow = ($pageNum-1)*$pageSize;
+        $sql="SELECT idTin, TieuDe, TomTat, urlHinh, Ngay, SoLanXem 
+        FROM  tin  WHERE AnHien = 1 AND idLT=$idLT 
+        ORDER BY idTin DESC LIMIT $startRow , $pageSize ";// chỉ lấy vài record
         $kq = $this->db-> query($sql);
-        if(!$kq) die( $this-> db->error);
-        return $kq;
-    }
+        if(!$kq) die( $this-> db->error);	
+         
+        //đếm số record, 2 câu lệnh sql phải giống nhau phần From & Where
+        $sql = "SELECT count(*) FROM  tin WHERE AnHien = 1 AND idLT=$idLT";	
+        $rs = $this->db->query($sql) ;	
+        $row_rs = $rs->fetch_row();
+        $totalRows = $row_rs[0];
+        if(!$kq) die( $this-> db->error);	
+        return $kq;		
+     }
+     function TimKiem($tukhoa, &$totalRows, $pageNum=1, $pageSize=5){
+        $startRow = ($pageNum-1)*$pageSize;
+         $tukhoa = $this->db-> escape_string( trim(strip_tags($tukhoa)) );
+         $sql = "SELECT idTin, TieuDe, TomTat, urlHinh, Ngay, SoLanXem, Ten, TenTL
+         FROM tin, loaitin, theloai
+         WHERE tin.AnHien = 1 AND tin.idLT = loaitin.idLT AND tin.idTL = theloai.idTL 
+         AND (TieuDe RegExp '$tukhoa' or TomTat RegExp '$tukhoa') 
+         ORDER BY idTin DESC LIMIT $startRow , $pageSize ";		
+         $kq = $this->db->query($sql);
+        if(!$kq) die( 'Lỗi trong hàm ' . __FUNCTION__. '  '. $this-> db->error);
+     
+         $sql = "SELECT count(*) 
+         FROM tin, loaitin, theloai
+         WHERE tin.AnHien = 1 AND tin.idLT = loaitin.idLT AND tin.idTL = theloai.idTL 
+         AND (TieuDe RegExp '$tukhoa' or TomTat RegExp '$tukhoa') ";	
+         $rs = $this->db->query($sql);
+        if(!$rs) die( 'Lỗi trong hàm ' . __FUNCTION__. '  '. $this-> db->error);
+        $row_rs = $rs->fetch_row();
+        $totalRows = $row_rs[0];
+         return $kq;
+     }
+     
 
 }//tin
 ?>

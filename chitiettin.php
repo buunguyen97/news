@@ -99,10 +99,10 @@ $tl =$t ->LayTheLoaiTrongTin($idTin);
             <?php while ($row = $kq->fetch_assoc()) {?>
 
             <li class="post tintieptheo">
-                <a href="post.html" title="<?=$row['TieuDe']?> ">
+                <a href="index.php?p=detail&idTin=<?=$row['idTin'];?>" title="<?=$row['TieuDe']?> ">
                     <img src='<?=$row['urlHinh']?> ' alt='img' onerror="this.src='/news/defaultImg.jpg'">
                 </a>
-                <h5><a href="post.html" title="<?=$row['TieuDe']?> "><?=$row['TieuDe']?> </a></h5>
+                <h5><a href="index.php?p=detail&idTin=<?=$row['idTin'];?>" title="<?=$row['TieuDe']?> "><?=$row['TieuDe']?> </a></h5>
                 <ul class="post_details simple">
 
                     <li class="date">

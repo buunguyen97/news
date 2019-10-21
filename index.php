@@ -91,7 +91,8 @@
 						<div class="column column_2_3">
                             <?php
                             if ($p=="detail") require "chitiettin.php";
-                            else if ($p=="cat") require "tintrongloai.php";
+							else if ($p=="cat") require "tintrongloai.php";
+							else if ($p=="search") require "ketquatimkiem.php";
 
                             else {
                             ?>
@@ -124,6 +125,7 @@
                             <?php require "listloaitin.php";?>
 						</div>
 					</div>
+					<?php if ($p=="") { ?>
 					<div class="row page_margin_top_section">
 						<div class="column column_1_1">
 							<h4 class="box_header">Top Posts</h4>
@@ -148,6 +150,7 @@
 							</div>
 						</div>
 					</div>
+					<?php } ?>
 
 				</div>
 			</div>

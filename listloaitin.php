@@ -3,7 +3,7 @@
 <ul class="taxonomies columns clearfix page_margin_top">
     <?php while($row = $kq->fetch_assoc() ) { ?>
     <li>
-        <a href="category_world.html" title="<?=$row['TenLT']?>"><?=$row['TenLT']?> </a>
+        <a href="index.php?p=cat&idLT=<?=$row['idLT']?>" title="<?=$row['TenLT']?>"><?=$row['TenLT']?> </a>
     </li>
 
     <?php }?>
