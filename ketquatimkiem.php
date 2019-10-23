@@ -23,7 +23,7 @@ $kq = $t->TimKiem($tukhoa,$totalRows, $pageNum, $pageSize);
 </style>
 <div class="page_header clearfix ">
     <div class="page_header_left">
-        <h1 class="page_title">KẾT QUẢ TÌm: <?=$tukhoa?>  </h1>
+        <h1 class="page_title">KẾT QUẢ TÌM: <?=$tukhoa?></h1>
     </div>
     <div class="page_header_right">
         <ul class="bread_crumb">

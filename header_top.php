@@ -1,8 +1,14 @@
 <div class="header_top_bar">
     <form class="search" action="" method="get">
-        <input type="text" name="s" placeholder="Từ khóa..." value="Từ khóa..." class="search_input hint">
+        <?php 
+        $tukhoa = (isset($_GET['tukhoa'])==true)? $_GET['tukhoa']:"";	
+        $tukhoa = str_replace( array('"','"') , "", trim(strip_tags($tukhoa)));
+        ?>
+        <input type="hidden" name="p" value="search">
+        <input type="text" name="tukhoa" placeholder="Từ khóa" value="<?=$tukhoa?>" class="search_input hint">
         <input type="submit" class="search_submit" value="">
     </form>
+
     <!--<ul class="social_icons dark clearfix">
     <ul class="social_icons colors clearfix">-->
     <ul class="social_icons clearfix">
