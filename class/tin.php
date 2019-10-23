@@ -204,6 +204,25 @@ class tin extends goc{
         $totalRows = $row_rs[0];
          return $kq;
      }
+     function getTitle($p=''){
+        if ($p=='') return "Tin tức tổng hợp";
+        elseif ($p=='search') return "Tìm kiếm tin";
+        elseif ($p=="detail"){
+           $id = $_GET['idTin'];  settype($id,"int");
+           $kq = $this->db->query("select TieuDe from tin where idTin=$id");
+           if(!$kq) die( $this-> db->error);
+           if ($kq->num_rows<=0) return "Tin tức tổng hợp";
+           $row_kq = $kq->fetch_row();
+           return $row_kq[0];
+        }
+        elseif ($p=="cat"){
+           $id = $_GET['idLT'];  settype($id,"int");
+           $tenLT = $this->LayTenLoaiTin($id);
+           if ($tenLT=="") return "Tin tức tổng hợp";
+           else return $tenLT;
+        }
+     } //function 
+     
      
 
 }//tin
