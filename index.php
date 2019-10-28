@@ -10,6 +10,7 @@
 <html>
 	<head>
 		<title><?=$t->getTitle($p); ?></title>
+        <base href="http://localhost/news/"/>
 		<!--meta-->
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.2" />

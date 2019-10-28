@@ -1,5 +1,7 @@
 <?php
-$idTin = $_GET['idTin']; settype($idTin,"int");
+$TieuDe_KhongDau = $_GET['TieuDe_KhongDau'];
+$idTin = $t->LayidTin($TieuDe_KhongDau);
+
 $row = $t->ChiTietTin($idTin);
 $t->CapNhatSolanXemTin($idTin);
 $k = $t ->LayCacTags($idTin);

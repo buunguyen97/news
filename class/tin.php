@@ -204,26 +204,39 @@ class tin extends goc{
         $totalRows = $row_rs[0];
          return $kq;
      }
-     function getTitle($p=''){
-        if ($p=='') return "Tin tức tổng hợp";
-        elseif ($p=='search') return "Tìm kiếm tin";
+    function getTitle($p=''){
+        if ($p=='') return "Tin tức online";
+        elseif ($p=='search') return "Tìm kiếm thông tin";
+        elseif ($p=='register') return "Đăng ký thành viên";
         elseif ($p=="detail"){
-           $id = $_GET['idTin'];  settype($id,"int");
-           $kq = $this->db->query("select TieuDe from tin where idTin=$id");
-           if(!$kq) die( $this-> db->error);
-           if ($kq->num_rows<=0) return "Tin tức tổng hợp";
-           $row_kq = $kq->fetch_row();
-           return $row_kq[0];
+            $TieuDe_KhongDau = trim(strip_tags($_GET['TieuDe_KhongDau']));
+            $TieuDe_KhongDau = $this->db->escape_string($TieuDe_KhongDau);
+            $kq = $this->db->query("select TieuDe from tin 
+      where TieuDe_KhongDau='$TieuDe_KhongDau'");
+            if(!$kq) die( $this-> db->error);
+            if ($kq->num_rows<=0) return "Tin tức tổng hợp";
+            $row_kq = $kq->fetch_row();
+            return $row_kq[0];
         }
         elseif ($p=="cat"){
-           $id = $_GET['idLT'];  settype($id,"int");
-           $tenLT = $this->LayTenLoaiTin($id);
-           if ($tenLT=="") return "Tin tức tổng hợp";
-           else return $tenLT;
+            $id = $_GET['idLT'];  settype($id,"int");
+            $kq = $this->db->query("select Ten from loaitin where idLT=$id");
+            if(!$kq) die( $this-> db->error);
+            if ($kq->num_rows<=0) return "Tin tức tổng hợp";
+            $row_kq = $kq->fetch_row();
+            return $row_kq[0];
         }
-     } //function 
-     
-     
+    } //function getTitle
+
+
+    function LayidTin($TieuDe_KhongDau){
+        $TieuDe_KhongDau = trim(strip_tags($_GET['TieuDe_KhongDau']));
+        $TieuDe_KhongDau = $this->db->escape_string($TieuDe_KhongDau);
+        $sql = "SELECT idTin FROM tin WHERE TieuDe_KhongDau='$TieuDe_KhongDau'";
+        $kq = $this->db->query($sql);
+        $row_kq = $kq->fetch_assoc();
+        return $row_kq['idTin'];
+    }
 
 }//tin
 ?>

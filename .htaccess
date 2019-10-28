@@ -1,0 +1,3 @@
+RewriteEngine on
+RewriteRule ^songdep/$  index.php?p=cat&idLT=12  [L]
+RewriteRule ^bv/(.*)\.html$ index.php?p=detail&TieuDe_KhongDau=$1
