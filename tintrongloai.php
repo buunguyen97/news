@@ -1,5 +1,7 @@
 <?php
-$idLT=$_GET['idLT']; settype($idLT, "int");
+$Ten_KhongDau = $_GET['Ten_KhongDau'];
+$idLT = $t->LayidLT($Ten_KhongDau);
+
 $pageSize = PAGEGINATION_PERPAGE ; //số tin sẽ hiện trong 1 trang
 if (isset($_GET['pageNum'])) $pageNum = $_GET['pageNum'];//trang user xem
 settype($pageNum, "int");
@@ -44,12 +46,12 @@ $kq = $t->TinTrongLoai($idLT ,$pageNum, $pageSize,$totalRows ); //chỉ lấy 1 
 <ul class="blog big">
     <?php while ($row=$kq->fetch_assoc()) {?>
     <li class="post tintrongloai">
-        <a class="tieude" href="index.php?p=detail&idTin=<?=$row['idTin']?>" title="<?=$row['TieuDe']?> ">
+        <a class="tieude" href="bv/<?=$row['TieuDe_KhongDau'];?>.html" title="<?=$row['TieuDe']?> ">
             <img src='<?=$row['urlHinh']?> ' alt='img' onerror="this.src='/news/defaultImg.jpg'">
         </a>
         <div class="post_content">
             <h2 class="with_number">
-                <a href="index.php?p=detail&idTin=<?=$row['idTin']?>" title="<?=$row['TieuDe']?> "><?=$row['TieuDe']?> </a>
+                <a href="bv/<?=$row['TieuDe_KhongDau'];?>.html" title="<?=$row['TieuDe']?> "><?=$row['TieuDe']?> </a>
                 <a class="comments_number" href="post.html#comments_list" title="2 comments">2<span class="arrow_comments"></span></a>
             </h2>
             <ul class="post_details">

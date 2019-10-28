@@ -3,7 +3,7 @@ require_once "class/goc.php";
 class tin extends goc{
 
     function TinNoiBat($from, $sotin, $lang){
-        $sql="SELECT idTin,TieuDe,Ngay,TomTat, urlHinh, loaitin.Ten as TenLT 
+        $sql="SELECT idTin,TieuDe,Ngay,TomTat, urlHinh, loaitin.Ten as TenLT ,TieuDe_KhongDau
          FROM tin, loaitin
           WHERE tin.idLT = loaitin.idLT AND tin.AnHien=1 AND TinNoiBat=1 AND tin.lang='$lang' 
          ORDER BY idTin DESC LIMIT $from, $sotin";
@@ -12,7 +12,7 @@ class tin extends goc{
         return $kq;
     }
     function TinMoi($from, $sotin, $lang){
-        $sql="SELECT idTin,TieuDe,Ngay,TomTat, urlHinh, loaitin.Ten as TenLT 
+        $sql="SELECT idTin,TieuDe,Ngay,TomTat, urlHinh, loaitin.Ten as TenLT ,TieuDe_KhongDau
      FROM tin, loaitin 
 	  WHERE tin.idLT = loaitin.idLT AND tin.AnHien=1 and tin.lang='$lang' 
      ORDER BY idTin DESC LIMIT $from, $sotin";
@@ -21,7 +21,7 @@ class tin extends goc{
         return $kq;
     }
     function TinMoiTrong1Loai($idLT, $from, $sotin, $lang){
-        $sql="SELECT idTin,TieuDe,Ngay,TomTat, urlHinh 
+        $sql="SELECT idTin,TieuDe,Ngay,TomTat, urlHinh ,TieuDe_KhongDau
      FROM tin WHERE idLT = $idLT AND AnHien=1 and lang='$lang' 
      ORDER BY idTin DESC LIMIT $from, $sotin";
         $kq = $this->db->query($sql);
@@ -38,7 +38,7 @@ class tin extends goc{
         return $ten;
     }
     function TinNgauNhien($sotin, $lang){
-        $sql="SELECT idTin,TieuDe,Ngay,TomTat, urlHinh, loaitin.Ten as TenLT 
+        $sql="SELECT idTin,TieuDe,Ngay,TomTat, urlHinh, loaitin.Ten as TenLT ,TieuDe_KhongDau
      FROM tin, loaitin
 	  WHERE tin.idLT = loaitin.idLT AND tin.AnHien=1 and tin.lang='$lang' 
      ORDER BY rand() LIMIT 0, $sotin";
@@ -61,7 +61,7 @@ class tin extends goc{
         return $kq;
     }
     function TinXemNhieu($from, $sotin, $lang){
-        $sql="SELECT idTin,TieuDe,Ngay,TomTat, urlHinh, loaitin.Ten as TenLT 
+        $sql="SELECT idTin,TieuDe,Ngay,TomTat, urlHinh, loaitin.Ten as TenLT ,TieuDe_KhongDau
      FROM tin, loaitin
 	  WHERE tin.idLT = loaitin.idLT AND tin.AnHien=1 and tin.lang='$lang' 
      ORDER BY SoLanXem DESC LIMIT $from, $sotin";
@@ -70,7 +70,7 @@ class tin extends goc{
         return $kq;
     }
     function TinMoiCoPhanHoi($from, $sotin, $lang){
-        $sql="SELECT idTin,TieuDe,Ngay,TomTat, urlHinh, loaitin.Ten as TenLT 
+        $sql="SELECT idTin,TieuDe,Ngay,TomTat, urlHinh, loaitin.Ten as TenLT ,TieuDe_KhongDau
      FROM tin, loaitin
 	  WHERE tin.idLT = loaitin.idLT AND tin.AnHien=1 and tin.lang='$lang' 
 	  AND idTin in (
@@ -96,7 +96,7 @@ class tin extends goc{
         return $kq;
     }
     function TinMoiNhan($sotin, $lang){
-        $sql="SELECT idTin,TieuDe, Ngay
+        $sql="SELECT idTin,TieuDe, Ngay,TieuDe_KhongDau
      FROM tin  WHERE idTL=22 AND lang='$lang' 
      LIMIT 0, $sotin";
         $kq = $this->db->query($sql);
@@ -105,7 +105,7 @@ class tin extends goc{
     }
     function ChiTietTin($idTin)  {
         settype($idTin, "int");
-        $sql="SELECT idTin, TieuDe, TomTat, Ngay, urlHinh, Content, SoLanXem, 
+        $sql="SELECT idTin, TieuDe, TomTat, Ngay, urlHinh, Content, SoLanXem, TieuDe_KhongDau,
 	tin.idLT, Ten, tin.idTL, TenTL
 	FROM  tin, loaitin, theloai
 	WHERE tin.idLT=loaitin.idLT  AND loaitin.idTL=theloai.idTL AND idTin=$idTin";
@@ -120,7 +120,7 @@ class tin extends goc{
         $this->db->query($sql);
     }
     function TinCuCungLoai($idTin, $lang, $sotin = 5){
-        $sql="SELECT idTin, TieuDe, TomTat, urlHinh, Ngay, SoLanXem  FROM  tin 
+        $sql="SELECT idTin, TieuDe, TomTat, urlHinh, Ngay, SoLanXem,TieuDe_KhongDau  FROM  tin 
 	WHERE AnHien = 1 AND idTin<$idTin AND  lang ='$lang' 
 	AND idLT = (SELECT idLT FROM tin WHERE idTin = $idTin)
 	ORDER BY idTin DESC  LIMIT 0, $sotin";
@@ -169,7 +169,7 @@ class tin extends goc{
 
     function TinTrongLoai($idLT ,$pageNum, $pageSize,&$totalRows ){
         $startRow = ($pageNum-1)*$pageSize;
-        $sql="SELECT idTin, TieuDe, TomTat, urlHinh, Ngay, SoLanXem 
+        $sql="SELECT idTin, TieuDe, TomTat, urlHinh, Ngay, SoLanXem ,TieuDe_KhongDau
         FROM  tin  WHERE AnHien = 1 AND idLT=$idLT 
         ORDER BY idTin DESC LIMIT $startRow , $pageSize ";// chỉ lấy vài record
         $kq = $this->db-> query($sql);
@@ -186,7 +186,7 @@ class tin extends goc{
      function TimKiem($tukhoa, &$totalRows, $pageNum=1, $pageSize=5){
         $startRow = ($pageNum-1)*$pageSize;
          $tukhoa = $this->db-> escape_string( trim(strip_tags($tukhoa)) );
-         $sql = "SELECT idTin, TieuDe, TomTat, urlHinh, Ngay, SoLanXem, Ten, TenTL
+         $sql = "SELECT idTin, TieuDe, TomTat, urlHinh, Ngay, SoLanXem, Ten, TenTL,TieuDe_KhongDau
          FROM tin, loaitin, theloai
          WHERE tin.AnHien = 1 AND tin.idLT = loaitin.idLT AND tin.idTL = theloai.idTL 
          AND (TieuDe RegExp '$tukhoa' or TomTat RegExp '$tukhoa') 

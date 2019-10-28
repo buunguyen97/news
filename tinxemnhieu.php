@@ -4,10 +4,10 @@
         <ul class="blog horizontal_carousel page_margin_top autoplay-0 visible-4 scroll-1 navigation-1 easing-easeInOutQuint duration-750">
             <?php while($row = $kq->fetch_assoc() ) { ?>
             <li class="post tinxemnhieu">
-                <a href="index.php?p=detail&idTin=<?=$row['idTin'];?>" title="The Public Health Crisis Hiding in Our Food">
+                <a href="bv/<?=$row['TieuDe_KhongDau'];?>.html" title="The Public Health Crisis Hiding in Our Food">
                     <img src='<?=$row['urlHinh']?> ' alt='img' onerror="this.src='/news/defaultImg.jpg'">
                 </a>
-                <h5><span class="number"><?=++$demTXN?>.</span><a href="index.php?p=detail&idTin=<?=$row['idTin'];?>" title="<?=$row['TieuDe']?>"><?=$row['TieuDe']?> </a></h5>
+                <h5><span class="number"><?=++$demTXN?>.</span><a href="bv/<?=$row['TieuDe_KhongDau'];?>.html" title="<?=$row['TieuDe']?>"><?=$row['TieuDe']?> </a></h5>
                 <ul class="post_details simple">
                     <li class="category"><a href="category_health.html" title="<?=$row['TenLT']?>"><?=$row['TenLT']?> </a></li>
                     <li class="date">

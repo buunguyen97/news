@@ -3,7 +3,7 @@
     <ul class="small_slider id-small_slider">
         <?php while ($row = $kq->fetch_assoc()) { ?>
             <li class="slide">
-                <a href="index.php?p=detail&idTin=<?=$row['idTin'];?>" title="Nuclear Fusion Closer to Becoming a Reality">
+                <a href="bv/<?=$row['TieuDe_KhongDau'];?>.html" title="Nuclear Fusion Closer to Becoming a Reality">
                     <img src='<?= $row['urlHinh'] ?>' alt='img' onerror="this.src='/news/defaultImg.jpg'">
                 </a>
                 <div class="slider_content_box">
@@ -13,7 +13,7 @@
                             <?= date('d/m/Y', strtotime($row['Ngay'])) ?>
                         </li>
                     </ul>
-                    <h2><a href="index.php?p=detail&idTin=<?=$row['idTin'];?>"
+                    <h2><a href="bv/<?=$row['TieuDe_KhongDau'];?>.html"
                            title="Nuclear Fusion Closer to Becoming a Reality"><?= $row['TieuDe'] ?></a></h2>
                     <p class="clearfix"> <?= $row['TomTat'] ?>.</p>
                 </div>

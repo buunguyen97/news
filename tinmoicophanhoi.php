@@ -5,7 +5,7 @@
         <ul class="blog horizontal_carousel page_margin_top autoplay-0 visible-4 scroll-1 navigation-1 easing-easeInOutQuint duration-750">
             <?php while($row = $kq->fetch_assoc() ) { ?>
             <li class="post tinmoiphanhoi">
-                <a href="index.php?p=detail&idTin=<?=$row['idTin'];?>" title="Escape From Planet Earth: The Movie">
+                <a href="bv/<?=$row['TieuDe_KhongDau'];?>.html" title="Escape From Planet Earth: The Movie">
                     <img src='<?=$row['urlHinh']?> ' alt='img' onerror="this.src='/news/defaultImg.jpg'">
                 </a>
                 <h5><span class="number"><?=++$demTMPH?>.</span><a href="post_quote.html" title="Escape From Planet Earth: The Movie"><?=$row['TieuDe']?> </a></h5>
@@ -18,7 +18,7 @@
             </li>
             <?php } ?>
             <li class="post first">
-                <a href="index.php?p=detail&idTin=<?=$row['idTin'];?>" title="High Altitudes May Aid Weight Control">
+                <a href="bv/<?=$row['TieuDe_KhongDau'];?>.html" title="High Altitudes May Aid Weight Control">
                     <img src='images/samples/330x242/image_05.jpg' alt='img'>
                 </a>
                 <h5><span class="number">4.</span><a href="post_small_image.html" title="High Altitudes May Aid Weight Control">High Altitudes May Aid Weight Control</a></h5>
