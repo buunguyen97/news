@@ -47,7 +47,7 @@ class tin extends goc{
         return $kq;
     }
     function ListLoaiTin($lang){
-        $sql="SELECT idLT, Ten as TenLT FROM loaitin
+        $sql="SELECT idLT, Ten as TenLT,Ten_KhongDau FROM loaitin
 	  WHERE lang='$lang' AND AnHien=1 ORDER BY ThuTu";
         $kq = $this->db->query($sql);
         if(!$kq) die('Lỗi trong hàm '.__FUNCTION__.' '. $this->db->error);
@@ -246,6 +246,37 @@ class tin extends goc{
         return $idLT;
     }
 
+    function GuiMail($to, $from, $from_name, $subject, $body, $username, $password, &$error){
+        $error="";
+        require_once "class/class.phpmailer.php";
+        require_once "class/class.smtp.php";
+        try {
+            $mail = new PHPMailer();
+            $mail->IsSMTP();
+            $mail->SMTPDebug = 0;  //  1=errors and messages, 2=messages only
+            $mail->SMTPAuth = true;
+            $mail->SMTPSecure = 'ssl';
+            $mail->Host = 'smtp.gmail.com';
+            $mail->Port = 465;
+            $mail->Username = $username;
+            $mail->Password = $password;
+            $mail->SetFrom($from, $from_name);
+            $mail->Subject = $subject;
+            $mail->MsgHTML($body);// noi dung chinh cua mail
+            $mail->AddAddress($to);
+            $mail->CharSet="utf-8";
+            $mail->IsHTML(true);
+            $mail->SMTPOptions = array(
+                'ssl' => array(
+                    'verify_peer' => false,
+                    'verify_peer_name' => false,
+                    'allow_self_signed' => true
+                ));
+            if(!$mail->Send()) {$error='Loi:'.$mail->ErrorInfo; return false;}
+            else { $error = ''; return true; }
+        }
+        catch (phpmailerException $e) { echo "<pre>".$e->errorMessage(); }
+    }//function
 
 }//tin
 ?>

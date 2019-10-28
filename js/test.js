@@ -88,4 +88,36 @@ $(function () {
         });
     });
 
+    $('#checklienhe').click(function() {
+
+
+        console.log("jalsdkjsksask");
+
+
+        var checkformUrl = "lienhe.php";
+        // var namelh = $("#namelienhe").val();
+        // var emaillh = $("#emaillienhe").val();
+        // var sublh = $("#subject").val();
+        // var messagelh = $("#messagelienhe").val();
+
+        $.ajax({
+            url: checkformUrl,
+            type: 'POST',
+            data: $("#lienhe").serialize(),
+            success: function (result) {
+
+                if (result.result == 'co') {
+
+
+
+                }
+
+            },
+            error: function () {
+                console.log('aaaaaaaaaaaaaa')
+            }
+        });
+
+    })
+
 });

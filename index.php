@@ -94,7 +94,7 @@
                             if ($p=="detail") require "chitiettin.php";
 							else if ($p=="cat") require "tintrongloai.php";
 							else if ($p=="search") require "ketquatimkiem.php";
-
+                            else if ($p=="lienhe") require "lienhe.php";
                             else {
                             ?>
 
