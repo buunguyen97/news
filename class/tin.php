@@ -246,7 +246,7 @@ class tin extends goc{
         return $idLT;
     }
 
-    function GuiMail($to, $from, $from_name, $subject, $body, $username, $password, &$error){
+    function GuiMail($to, $from, $from_name, $subject, $body, $username, $password,$error){
         $error="";
         require_once "class/class.phpmailer.php";
         require_once "class/class.smtp.php";

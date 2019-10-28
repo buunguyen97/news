@@ -87,19 +87,50 @@ $(function () {
             }
         });
     });
-
+    $("#namelienhe").focus(function () {
+        $("#notiname").html("");
+        $("#notiname").removeClass("thongbao");
+    });
+    $("#emaillienhe").focus(function () {
+        $("#notiemail").html("");
+        $("#notiemail").removeClass("thongbao");
+    });
+    $("#messagelienhe").focus(function () {
+        $("#notinoidung").html("");
+        $("#notinoidung").removeClass("thongbao");
+    });
+    $("#subject").focus(function () {
+        $("#notisub").html("");
+        $("#notisub").removeClass("thongbao");
+    });
     $('#checklienhe').click(function() {
 
 
-        console.log("jalsdkjsksask");
-
-
-        var checkformUrl = "lienhe.php";
-        // var namelh = $("#namelienhe").val();
-        // var emaillh = $("#emaillienhe").val();
-        // var sublh = $("#subject").val();
-        // var messagelh = $("#messagelienhe").val();
-
+        var checkformUrl = "checklienhe.php";
+        var namelh = $("#namelienhe").val();
+        var emaillh = $("#emaillienhe").val();
+        var sublh = $("#subject").val();
+        var messagelh = $("#messagelienhe").val();
+        if (namelh == ""  || namelh == "Họ tên của bạn") {
+            $("#notiname").html("Ban chưa nhập họ tên");
+            $("#notiname").addClass("thongbao");
+            return false;
+        }
+        if (emaillh == "" || emaillh == "Email của bạn") {
+            $("#notiemail").html("Ban chưa nhập email");
+            $("#notiemail").addClass("thongbao");
+            return false;
+        }
+        if (sublh == "" || sublh == "Tiêu đề" ) {
+            $("#notisub").html("Ban chưa nhập tiêu đề");
+            $("#notisub").addClass("thongbao");
+            return false;
+        }
+        if (messagelh == "" || messagelh == "Nội dung liên hệ") {
+            $("#notinoidung").html("Ý kiến của bạn");
+            $("#notinoidung").addClass("thongbao");
+            return false;
+        }
         $.ajax({
             url: checkformUrl,
             type: 'POST',
@@ -107,7 +138,8 @@ $(function () {
             success: function (result) {
 
                 if (result.result == 'co') {
-
+                    $("#thongbaoLH").html("Cảm ơn bạn,thông tin đã được ghi nhận.");
+                    $("#thongbaoLH").addClass("thongbaoLH");
 
 
                 }

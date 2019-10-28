@@ -4225,3 +4225,13 @@ fieldset.column { margin:0; width: 50% }
 .binhluan{
 	display: none;
 }
+.thongbaoLH{
+	background: #ccc;
+	color: red;
+	padding: 20px;
+	text-align: center;
+	font-size: 18px;
+	line-height: 150%;
+	margin-top: 10px;
+	font-weight: bold;
+}
