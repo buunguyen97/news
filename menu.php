@@ -20,7 +20,7 @@
                     <?php while ($rowLT = $kq1->fetch_assoc() ) {?>
 
                     <li>
-                        <a href="index.php?p=cat&idLT=<?=$rowLT['idLT']?>" title=" <?=$rowLT['Ten'] ?>">
+                        <a href="cat/<?php echo $rowLT['Ten_KhongDau']?>/" title=" <?=$rowLT['Ten'] ?>">
                             <?=$rowLT['Ten'] ?>
                         </a>
                     </li>
@@ -55,7 +55,7 @@
                         <?php $kq1 = $t->ListLoaiTinTrong1TheLoai($rowTL['idTL']);?>
                         <?php while ($rowLT = $kq1->fetch_assoc() ) {?>
                             <li>
-                                <a href="index.php?p=cat&idLT=<?=$rowLT['idLT']?>" title="<?=$rowLT['Ten'] ?>">
+                                <a href="cat/<?php echo $rowLT['Ten_KhongDau']?>/" title="<?=$rowLT['Ten'] ?>">
                                     <?=$rowLT['Ten'] ?>
                                 </a>
                             </li>

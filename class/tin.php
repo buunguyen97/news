@@ -89,7 +89,7 @@ class tin extends goc{
         return $kq;
     }
     function ListLoaiTinTrong1TheLoai ($idTL){
-        $sql="SELECT idLT, Ten  FROM loaitin
+        $sql="SELECT idLT, Ten,Ten_KhongDau  FROM loaitin
 	  WHERE AnHien=1 and idTL=$idTL ORDER BY ThuTu ";
         $kq = $this->db->query($sql);
         if(!$kq) die('Lỗi trong hàm '.__FUNCTION__.' '. $this->db->error);
@@ -211,8 +211,7 @@ class tin extends goc{
         elseif ($p=="detail"){
             $TieuDe_KhongDau = trim(strip_tags($_GET['TieuDe_KhongDau']));
             $TieuDe_KhongDau = $this->db->escape_string($TieuDe_KhongDau);
-            $kq = $this->db->query("select TieuDe from tin 
-      where TieuDe_KhongDau='$TieuDe_KhongDau'");
+            $kq = $this->db->query("select TieuDe from tin where TieuDe_KhongDau='$TieuDe_KhongDau'");
             if(!$kq) die( $this-> db->error);
             if ($kq->num_rows<=0) return "Tin tức tổng hợp";
             $row_kq = $kq->fetch_row();
@@ -220,13 +219,12 @@ class tin extends goc{
         }
         elseif ($p=="cat"){
             $id = $_GET['idLT'];  settype($id,"int");
-            $kq = $this->db->query("select Ten from loaitin where idLT=$id");
-            if(!$kq) die( $this-> db->error);
-            if ($kq->num_rows<=0) return "Tin tức tổng hợp";
-            $row_kq = $kq->fetch_row();
-            return $row_kq[0];
+            $tenLT = $this->LayTenLoaiTin($id);
+            if ($tenLT=="") return "Tin tức tổng hợp";
+            else return $tenLT;
         }
     } //function getTitle
+
 
 
     function LayidTin($TieuDe_KhongDau){
@@ -237,6 +235,17 @@ class tin extends goc{
         $row_kq = $kq->fetch_assoc();
         return $row_kq['idTin'];
     }
+    function LayidLT($Ten_KhongDau){
+        $Ten_KhongDau = trim(strip_tags($_GET['Ten_KhongDau']));
+        $Ten_KhongDau = $this->db->escape_string($Ten_KhongDau);
+        $sql="select idLT from loaitin where Ten_KhongDau='$Ten_KhongDau'";
+        $kq = $this->db->query($sql);
+        if(!$kq) die( $this-> db->error);
+        $row_kq = $kq->fetch_assoc();
+        $idLT= $row_kq['idLT'];
+        return $idLT;
+    }
+
 
 }//tin
 ?>

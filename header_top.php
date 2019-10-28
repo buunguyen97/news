@@ -1,5 +1,5 @@
 <div class="header_top_bar">
-    <form class="search" action="" method="get">
+    <form class="search" action="" method="post" onsubmit="this.action='/news/search/' + document.getElementsByName('tukhoa')[0].value +'/'" >
         <?php 
         $tukhoa = (isset($_GET['tukhoa'])==true)? $_GET['tukhoa']:"";	
         $tukhoa = str_replace( array('"','"') , "", trim(strip_tags($tukhoa)));
@@ -33,7 +33,7 @@
             </a>
         </li>
     </ul>
-    <div class="latest_news_scrolling_list_container">
+    <div class="latest_news_scrolling_list_container">o
         <ul>
             <li class="category">MỚI NHẬN</li>
             <li class="left"><a href="#"></a></li>
