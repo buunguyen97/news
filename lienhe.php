@@ -1,3 +1,4 @@
+<?php session_start();?>
 <div class="row page_margin_top_section">
     <h4 class="box_header">
         Liên hệ với chúng tôi.
@@ -33,7 +34,7 @@
         &nbsp;
         <fieldset>
             <div class="block">
-                <img src="captcha.php" align="left" height="46"> &nbsp;
+                <img src="captcha.php" align="left" height="46" > &nbsp;
                 <input class="text_input" name="cap" placeholder="Nhập chữ trong hình" value="<?php if (isset($_POST['cap']) ) echo $_POST['cap']?>" >
             </div>
         </fieldset>

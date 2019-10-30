@@ -1212,117 +1212,117 @@ jQuery(document).ready(function($){
 	});
 	
 	//contact form
-	if($(".contact_form").length)
-		$(".contact_form")[0].reset();
-	$(".contact_form").submit(function(event){
-		event.preventDefault();
-		var data = $(this).serializeArray();
-		$("#contact_form .block").block({
-			message: false,
-			overlayCSS: {
-				opacity:'0.3',
-				"backgroundColor": "#FFF"
-			}
-		});
-		$.ajax({
-			url: $(".contact_form").attr("action"),
-			data: data,
-			type: "post",
-			dataType: "json",
-			success: function(json){
-				$("#contact_form [name='submit'], #contact_form [name='name'], #contact_form [name='email'], #contact_form [name='message']").qtip('destroy');
-				if(typeof(json.isOk)!="undefined" && json.isOk)
-				{
-					if(typeof(json.submit_message)!="undefined" && json.submit_message!="")
-					{
-						$("#contact_form [name='submit']").qtip(
-						{
-							style: {
-								classes: 'ui-tooltip-success'
-							},
-							content: { 
-								text: json.submit_message 
-							},
-							position: { 
-								my: "right center",
-								at: "left center" 
-							}
-						}).qtip('show');
-						$(".contact_form")[0].reset();
-						$(".contact_form input[type='text'], .contact_form textarea").trigger("focus").trigger("blur");
-					}
-				}
-				else
-				{
-					if(typeof(json.submit_message)!="undefined" && json.submit_message!="")
-					{
-						$("#contact_form [name='submit']").qtip(
-						{
-							style: {
-								classes: 'ui-tooltip-error'
-							},
-							content: { 
-								text: json.submit_message 
-							},
-							position: { 
-								my: "right center",
-								at: "left center" 
-							}
-						}).qtip('show');
-					}
-					if(typeof(json.error_name)!="undefined" && json.error_name!="")
-					{
-						$("#contact_form [name='name']").qtip(
-						{
-							style: {
-								classes: 'ui-tooltip-error'
-							},
-							content: { 
-								text: json.error_name 
-							},
-							position: { 
-								my: "bottom center",
-								at: "top center" 
-							}
-						}).qtip('show');
-					}
-					if(typeof(json.error_email)!="undefined" && json.error_email!="")
-					{
-						$("#contact_form [name='email']").qtip(
-						{
-							style: {
-								classes: 'ui-tooltip-error'
-							},
-							content: { 
-								text: json.error_email 
-							},
-							position: { 
-								my: "bottom center",
-								at: "top center" 
-							}
-						}).qtip('show');
-					}
-					if(typeof(json.error_message)!="undefined" && json.error_message!="")
-					{
-						$("#contact_form [name='message']").qtip(
-						{
-							style: {
-								classes: 'ui-tooltip-error'
-							},
-							content: { 
-								text: json.error_message 
-							},
-							position: { 
-								my: "bottom center",
-								at: "top center" 
-							}
-						}).qtip('show');
-					}
-				}
-				$("#contact_form .block").unblock();
-			}
-		});
-	});
+	// if($(".contact_form").length)
+	// 	$(".contact_form")[0].reset();
+	// $(".contact_form").submit(function(event){
+	// 	event.preventDefault();
+	// 	var data = $(this).serializeArray();
+	// 	$("#contact_form .block").block({
+	// 		message: false,
+	// 		overlayCSS: {
+	// 			opacity:'0.3',
+	// 			"backgroundColor": "#FFF"
+	// 		}
+	// 	});
+	// 	$.ajax({
+	// 		url: $(".contact_form").attr("action"),
+	// 		data: data,
+	// 		type: "post",
+	// 		dataType: "json",
+	// 		success: function(json){
+	// 			$("#contact_form [name='submit'], #contact_form [name='name'], #contact_form [name='email'], #contact_form [name='message']").qtip('destroy');
+	// 			if(typeof(json.isOk)!="undefined" && json.isOk)
+	// 			{
+	// 				if(typeof(json.submit_message)!="undefined" && json.submit_message!="")
+	// 				{
+	// 					$("#contact_form [name='submit']").qtip(
+	// 					{
+	// 						style: {
+	// 							classes: 'ui-tooltip-success'
+	// 						},
+	// 						content: {
+	// 							text: json.submit_message
+	// 						},
+	// 						position: {
+	// 							my: "right center",
+	// 							at: "left center"
+	// 						}
+	// 					}).qtip('show');
+	// 					$(".contact_form")[0].reset();
+	// 					$(".contact_form input[type='text'], .contact_form textarea").trigger("focus").trigger("blur");
+	// 				}
+	// 			}
+	// 			else
+	// 			{
+	// 				if(typeof(json.submit_message)!="undefined" && json.submit_message!="")
+	// 				{
+	// 					$("#contact_form [name='submit']").qtip(
+	// 					{
+	// 						style: {
+	// 							classes: 'ui-tooltip-error'
+	// 						},
+	// 						content: {
+	// 							text: json.submit_message
+	// 						},
+	// 						position: {
+	// 							my: "right center",
+	// 							at: "left center"
+	// 						}
+	// 					}).qtip('show');
+	// 				}
+	// 				if(typeof(json.error_name)!="undefined" && json.error_name!="")
+	// 				{
+	// 					$("#contact_form [name='name']").qtip(
+	// 					{
+	// 						style: {
+	// 							classes: 'ui-tooltip-error'
+	// 						},
+	// 						content: {
+	// 							text: json.error_name
+	// 						},
+	// 						position: {
+	// 							my: "bottom center",
+	// 							at: "top center"
+	// 						}
+	// 					}).qtip('show');
+	// 				}
+	// 				if(typeof(json.error_email)!="undefined" && json.error_email!="")
+	// 				{
+	// 					$("#contact_form [name='email']").qtip(
+	// 					{
+	// 						style: {
+	// 							classes: 'ui-tooltip-error'
+	// 						},
+	// 						content: {
+	// 							text: json.error_email
+	// 						},
+	// 						position: {
+	// 							my: "bottom center",
+	// 							at: "top center"
+	// 						}
+	// 					}).qtip('show');
+	// 				}
+	// 				if(typeof(json.error_message)!="undefined" && json.error_message!="")
+	// 				{
+	// 					$("#contact_form [name='message']").qtip(
+	// 					{
+	// 						style: {
+	// 							classes: 'ui-tooltip-error'
+	// 						},
+	// 						content: {
+	// 							text: json.error_message
+	// 						},
+	// 						position: {
+	// 							my: "bottom center",
+	// 							at: "top center"
+	// 						}
+	// 					}).qtip('show');
+	// 				}
+	// 			}
+	// 			$("#contact_form .block").unblock();
+	// 		}
+	// 	});
+	// });
 	//set author box position in small image post layout
 	$(".post.single.small_image .author_box").css({"position": "absolute", "top": ($(".post.single .post_image_box").outerHeight()+30) + "px", "bottom": "auto"});
 	if($(".menu_container").hasClass("sticky"))

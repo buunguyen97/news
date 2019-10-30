@@ -9,3 +9,6 @@ DirectoryIndex index.php
 AddDefaultCharset UTF-8
 Options -Indexes
 RewriteRule ^lien-he/$  index.php?p=lienhe [L]
+Rewritebase /news/
+RewriteRule ^vi/$  index.php?lang=vi [L]
+RewriteRule ^en/$  index.php?lang=en [L]

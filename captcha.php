@@ -3,9 +3,9 @@ session_start();
 header('Content-type: image/png');
 header("Pragma: No-cache");
 header("Cache-Control:No-cache, Must-revalidate");
-$sokytu=6;  $w = 180;  $h = 55; $nghieng=5;
+$sokytu=4;  $w = 180;  $h = 55; $nghieng=5;
 $size=27; $x=20; $y=45;  //toạ độ chữ
-$font = 'arial.ttf';
+$font = 'D:\\projects\\news\\arial.ttf';
 $str= md5(rand(0,9999));  //chữ ngẫu nhiên
 $str = strtoupper(substr($str, 10, $sokytu));
 $_SESSION['captcha_code'] = $str;

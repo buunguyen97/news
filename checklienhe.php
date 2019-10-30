@@ -2,7 +2,6 @@
 require_once "class/tin.php";
 $t = new tin();
 $data = ['result' => 'khong'];
-
 if (isset($_POST['namelienhe']) == true) {
 
 
@@ -13,8 +12,13 @@ if (isset($_POST['namelienhe']) == true) {
     $nd = nl2br($nd);
     $loi = "";
     $cap = $_POST['cap'];
-    if (strlen($nd)<=10) {
+    if (strlen($nd)<=10 ) {
         $loi="Nội dung liên hệ quá ngắn<br>";
+        echo $loi;
+        return false;
+    }
+    if ($_SESSION['captcha_code'] != $cap ){
+        $loi="Captcha k đúng<br>";
         echo $loi;
         return false;
     }
@@ -27,6 +31,7 @@ if (isset($_POST['namelienhe']) == true) {
         $error = "";
         $t->GuiMail($to, $from, $fromName = "BQT", $td, $nd, $from, $pass,$error);
         $data = ['result' => 'co'];
+
     }
 
     header('Content-Type: application/json');

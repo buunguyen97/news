@@ -2,9 +2,15 @@
       require_once "class/tin.php";
       $t = new tin;
       $lang='vi';
-      $p=$_GET['p']; //đây là tham số
-?>
+        if (isset($_GET['lang'])==true) $lang=$_GET['lang'];
+        else if (isset($_SESSION['lang'])==true) $lang = $_SESSION['lang'];
+        $arrLang= array('vi','en');
+        if (in_array($lang, $arrLang)==false) $lang='vi';
+        $_SESSION['lang']=$lang;
 
+$p=$_GET['p']; //đây là tham số
+?>
+<?php ob_start();?>
 
 <!DOCTYPE html>
 <html>
@@ -74,8 +80,8 @@
 			<div class="header_container">
 				<div class="header clearfix">
 					<div class="logo">
-						<h1><a href="index.php" title="Pressroom">TIN TỨC TỔNG HỢP</a></h1>
-						<h4>Tin tức nóng sốt, đọc mau, đọc mau</h4>
+						<h1><a href="index.php" title="{Tin_Tuc_Tong_Hop}">{Tin_Tuc_Tong_Hop}</a></h1>
+						<h4>{Sub_SiteTitle}</h4>
 					</div>
 					<div class="placeholder">728 x 90</div>
 				</div>
@@ -102,10 +108,10 @@
                                 <div id="small_slider" class='slider_posts_list_container small'>
                                 </div>
                                 <div class="row page_margin_top">
-                                    <h4 class="box_header">More Articles</h4>
+                                    <h4 class="box_header">{Tin_Noi_Bat}</h4>
                                     <?php require "slider2.php"?>
                                 </div>
-                                <h4 class="box_header page_margin_top_section">Tin mới nhất</h4>
+                                <h4 class="box_header page_margin_top_section">{Tin_Moi_Nhat}</h4>
                                 <div class="row">
                                     <?php $kq = $t->TinMoi(0, 2, $lang); include "tinmoi.php"?>
                                     <?php $kq = $t->TinMoi(2, 2, $lang); include "tinmoi.php"?>
@@ -118,7 +124,7 @@
                             <?php $idLT=3; require "tinmoitrongloai.php"?>
 
 
-							<h4 class="box_header page_margin_top_section">Bạn xem chưa</h4>
+							<h4 class="box_header page_margin_top_section">{Ban_Xem_Chua}</h4>
 							<div class="vertical_carousel_container clearfix">
                                 <?php require "tinngaunhien.php"; ?>
 							</div>
@@ -134,13 +140,13 @@
 								<ul class="tabs_navigation small clearfix">
 
 									<li>
-										<a href="#most-read" title="Most Read">
-                                            Tin Xem nhiều
+										<a href="#most-read" title="{Tin_Xem_Nhieu}">
+                                            {Tin_Xem_Nhieu}
 										</a>
 									</li>
 									<li>
-										<a href="#most-commented" title="Most Commented">
-                                            Mới phản hồi
+										<a href="#most-commented" title="{Moi_Phan_Hoi}">
+                                            {Moi_Phan_Hoi}
 										</a>
 									</li>
 								</ul>
@@ -203,3 +209,19 @@
 		<script type="text/javascript" src="js/test.js"></script>
 	</body>
 </html>
+<?php
+$str = ob_get_clean();
+require "lang_$lang.php";
+$str = str_replace("{Ban_Xem_Chua}", BAN_XEM_CHUA, $str);
+$str = str_replace("{Loai_Tin}", LOAI_TIN, $str);
+$str = str_replace("{Trang_Chu}", TRANG_CHU, $str);
+$str = str_replace("{Moi_Nhan}", MOI_NHAN, $str);
+$str = str_replace("{Tu_Khoa}", TU_KHOA, $str);
+$str = str_replace("{Tin_Tuc_Tong_Hop}", TIN_TUC_TONG_HOP, $str);
+$str = str_replace("{Sub_SiteTitle}", SUB_SITETITLE, $str);
+$str = str_replace("{Tin_Moi_Nhat}", TIN_MOI_NHAT, $str);
+$str = str_replace("{Tin_Moi_Bat}", TIN_NOI_BAT, $str);
+$str = str_replace("{Tin_Xem_Nhieu}", TIN_XEM_NHIEU, $str);
+$str = str_replace("{Moi_Phan_Hoi}", MOI_PHAN_HOI, $str);
+echo $str;
+?>

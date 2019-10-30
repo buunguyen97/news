@@ -5,7 +5,7 @@
         $tukhoa = str_replace( array('"','"') , "", trim(strip_tags($tukhoa)));
         ?>
         <input type="hidden" name="p" value="search">
-        <input type="text" name="tukhoa" placeholder="Từ khóa" value="<?=$tukhoa?>" class="search_input hint">
+        <input type="text" name="tukhoa" placeholder="{Tu_Khoa}" value="<?=$tukhoa?>" class="search_input hint">
         <input type="submit" class="search_submit" value="">
     </form>
 
@@ -32,10 +32,15 @@
                 &nbsp;
             </a>
         </li>
+        <li>
+            <a href="/news/vi/"> <img src="co/vi.png" style="margin:10px;"> </a>
+            <a href="/news/en/"> <img src="co/en.png" style="margin:10px;"> </a>
+        </li>
+
     </ul>
-    <div class="latest_news_scrolling_list_container">o
+    <div class="latest_news_scrolling_list_container">
         <ul>
-            <li class="category">MỚI NHẬN</li>
+            <li class="category">{Moi_Nhan}</li>
             <li class="left"><a href="#"></a></li>
             <li class="right"><a href="#"></a></li>
             <li class="posts">

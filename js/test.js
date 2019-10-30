@@ -103,6 +103,12 @@ $(function () {
         $("#notisub").html("");
         $("#notisub").removeClass("thongbao");
     });
+
+    //kiểm tra email
+    function isEmail(email) {
+        var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+        return regex.test(email);
+    }
     $('#checklienhe').click(function() {
 
 
@@ -118,6 +124,12 @@ $(function () {
         }
         if (emaillh == "" || emaillh == "Email của bạn") {
             $("#notiemail").html("Ban chưa nhập email");
+            $("#notiemail").addClass("thongbao");
+            return false;
+        }
+
+        if( !isEmail(emaillh)) {
+            $("#notiemail").html("Email không hợp lệ");
             $("#notiemail").addClass("thongbao");
             return false;
         }
@@ -138,9 +150,14 @@ $(function () {
             success: function (result) {
 
                 if (result.result == 'co') {
+                
+
                     $("#thongbaoLH").html("Cảm ơn bạn,thông tin đã được ghi nhận.");
                     $("#thongbaoLH").addClass("thongbaoLH");
-
+                    $("#namelienhe").val("");
+                    $("#emaillienhe").val("");
+                    $("#subject").val("");
+                    $("#messagelienhe").val("");
 
                 }
 

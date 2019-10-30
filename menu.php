@@ -40,8 +40,8 @@
         <nav>
             <ul class="mobile-menu">
                 <li class="submenu selected">
-                    <a href="index.php" title=" Trang Chủ">
-                        Trang Chủ
+                    <a href="index.php" title="{Trang_Chu}">
+                        {Trang_Chu}
                     </a>
 
                 </li>
