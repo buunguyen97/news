@@ -223,6 +223,10 @@ $str = str_replace("{Sub_SiteTitle}", SUB_SITETITLE, $str);
 $str = str_replace("{Tin_Moi_Nhat}", TIN_MOI_NHAT, $str);
 $str = str_replace("{Tin_Noi_Bat}", TIN_NOI_BAT, $str);
 $str = str_replace("{Tin_Xem_Nhieu}", TIN_XEM_NHIEU, $str);
-$str = str_replace("{Moi_Phan_Hoi}", MOI_PHAN_HOI, $str);
+$str = str_replace("{Moi_Phan_Hoi}",MOI_PHAN_HOI, $str);
+$str = str_replace("{Ve_Chung_Toi}",VE_CHUNG_TOI, $str);
+$str = str_replace("{{Liên hệ với chúng tôi qua các kênh}}",LHCK, $str);
+$str = str_replace("{Tomtat}",TOMTAT, $str);
+$str = str_replace("{DiaChi}",DIACHI, $str);
 echo $str;
 ?>

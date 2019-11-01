@@ -10,3 +10,7 @@ define("TIN_NOI_BAT","Tin nổi bật");
 define("TIN_MOI_NHAT","Tin mới nhất");
 define("TIN_XEM_NHIEU","Tin xem nhiều");
 define("MOI_PHAN_HOI","Mới phản hồi");
+define("VE_CHUNG_TOI","Về Chúng Tôi");
+define("LHCK","Liên hệ với chúng tôi qua các kênh");
+define("TOMTAT","Tin tức hàng ngày hàng giờ, đủ mọi lĩnh vực, đủ các loại thượng vàng hạ cám hằm bà lằn, tổng hợp nhanh, trên khắp mọi miền.");
+define("DIACHI","Địa Chỉ");
