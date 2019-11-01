@@ -108,10 +108,11 @@ $p=$_GET['p']; //đây là tham số
                                 <div id="small_slider" class='slider_posts_list_container small'>
                                 </div>
                                 <div class="row page_margin_top">
-                                    <h4 class="box_header">{Tin_Noi_Bat}</h4>
+                                    <h4 class="box_header page_margin_top_section">{Tin_Noi_Bat}</h4>
                                     <?php require "slider2.php"?>
                                 </div>
                                 <h4 class="box_header page_margin_top_section">{Tin_Moi_Nhat}</h4>
+
                                 <div class="row">
                                     <?php $kq = $t->TinMoi(0, 2, $lang); include "tinmoi.php"?>
                                     <?php $kq = $t->TinMoi(2, 2, $lang); include "tinmoi.php"?>
@@ -220,7 +221,7 @@ $str = str_replace("{Tu_Khoa}", TU_KHOA, $str);
 $str = str_replace("{Tin_Tuc_Tong_Hop}", TIN_TUC_TONG_HOP, $str);
 $str = str_replace("{Sub_SiteTitle}", SUB_SITETITLE, $str);
 $str = str_replace("{Tin_Moi_Nhat}", TIN_MOI_NHAT, $str);
-$str = str_replace("{Tin_Moi_Bat}", TIN_NOI_BAT, $str);
+$str = str_replace("{Tin_Noi_Bat}", TIN_NOI_BAT, $str);
 $str = str_replace("{Tin_Xem_Nhieu}", TIN_XEM_NHIEU, $str);
 $str = str_replace("{Moi_Phan_Hoi}", MOI_PHAN_HOI, $str);
 echo $str;

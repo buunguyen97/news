@@ -49,7 +49,7 @@
                     <?php while ($row = $kq->fetch_assoc() ) {?>
 
                     <li>
-                        <a href="post.html" title=""><?=$row['TieuDe']?></a>
+                        <a href="bv/<?=$row['TieuDe_KhongDau'];?>.html" title=""><?=$row['TieuDe']?></a>
                     </li>
                     <?php }?>
                 </ul>

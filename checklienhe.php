@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once "class/tin.php";
 $t = new tin();
 $data = ['result' => 'khong'];
@@ -13,12 +14,16 @@ if (isset($_POST['namelienhe']) == true) {
     $loi = "";
     $cap = $_POST['cap'];
     if (strlen($nd)<=10 ) {
-        $loi="Nội dung liên hệ quá ngắn<br>";
+        $loi="Nội dung liên hệ quá ngắn";
+        echo $loi;
+        return false;
+    }else if ( $cap == "" ){
+        $loi="Captcha chua nhap";
         echo $loi;
         return false;
     }
-    if ($_SESSION['captcha_code'] != $cap ){
-        $loi="Captcha k đúng<br>";
+    else if ($_SESSION['captcha_code'] != $cap ){
+        $loi="Captcha k đúng";
         echo $loi;
         return false;
     }

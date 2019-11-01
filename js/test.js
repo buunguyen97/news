@@ -109,6 +109,11 @@ $(function () {
         var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
         return regex.test(email);
     }
+    $("#cap").focus(function () {
+        $("#cap").html("");
+        $("#noticaptcha").removeClass("thongbao");
+        $("#noticaptcha").html("");
+    });
     $('#checklienhe').click(function() {
 
 
@@ -148,6 +153,19 @@ $(function () {
             type: 'POST',
             data: $("#lienhe").serialize(),
             success: function (result) {
+                if (result == 'Nội dung liên hệ quá ngắn') {
+                    $('#notinoidung').html("Nội dung quá ngắn");
+                    $("#notinoidung").addClass("thongbao");
+                }
+                if (result == 'Captcha chua nhap') {
+                    $('#noticaptcha').html("Nhập mã trong hình");
+                    $("#noticaptcha").addClass("thongbao");
+                }
+                if (result == 'Captcha k đúng') {
+                    $('#noticaptcha').html("Mã không đúng");
+                    $("#noticaptcha").addClass("thongbao");
+                }
+
 
                 if (result.result == 'co') {
                 

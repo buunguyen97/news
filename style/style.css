@@ -2786,7 +2786,6 @@ li.detail.category
 	min-height: 100px;
 	background: url('../images/preloader.gif') no-repeat center center;
 }
-.blog .post>a>img,
 .grid_view .post>a>img,
 .post.single .post_image img,
 .slider li.slide img,

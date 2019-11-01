@@ -28,14 +28,15 @@
         <fieldset>
             <div class="block">
                 <textarea name="messagelienhe" id="messagelienhe" placeholder="Nội dung liên hệ"><?php if (isset($_POST['message']) ) echo $_POST['message']?></textarea>
-
-                <p id="notinoidung"></p></div>
+                <p id="notinoidung"></p>
+            </div>
         </fieldset>
         &nbsp;
         <fieldset>
             <div class="block">
-                <img src="captcha.php" align="left" height="46" > &nbsp;
-                <input class="text_input" name="cap" placeholder="Nhập chữ trong hình" value="<?php if (isset($_POST['cap']) ) echo $_POST['cap']?>" >
+                <img src="captcha.php"  height="46" > &nbsp;
+                <input class="text_input" maxlength="4" name="cap" id="cap" placeholder="Nhập chữ trong hình" value="<?php if (isset($_POST['cap']) ) echo $_POST['cap']?>" >
+                <p id="noticaptcha"></p>
             </div>
         </fieldset>
 
