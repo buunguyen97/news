@@ -96,7 +96,7 @@ class tin extends goc{
         return $kq;
     }
     function TinMoiNhan($sotin, $lang){
-        $sql="SELECT idTin,TieuDe, Ngay, TieuDe_KhongDau
+        $sql="SELECT idTin,TieuDe, Ngay, TieuDe_KhongDau,Ngay
      FROM tin  WHERE idTL=3 AND lang='$lang' 
      LIMIT 0, $sotin";
         $kq = $this->db->query($sql);

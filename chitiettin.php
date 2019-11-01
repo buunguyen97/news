@@ -94,7 +94,7 @@ $tl =$t ->LayTheLoaiTrongTin($idTin);
     </ul>
 </div>
 <div class="row page_margin_top_section">
-    <h4 class="box_header">Tin tiếp theo</h4>
+    <h4 class="box_header">{Tin tiếp theo}</h4>
     <div class="horizontal_carousel_container page_margin_top">
         <ul class="blog horizontal_carousel autoplay-1 scroll-1 navigation-1 easing-easeInOutQuint duration-750">
             <?php $kq = $t->TinCuCungLoai($idTin, $lang, 8);?>
@@ -117,7 +117,7 @@ $tl =$t ->LayTheLoaiTrongTin($idTin);
     </div>
 </div>
 <div class="row page_margin_top_section">
-    <h4 class="box_header">Ý kiến bạn đọc</h4>
+    <h4 class="box_header">{Ý kiến bạn đọc}</h4>
 
     
    
@@ -130,22 +130,22 @@ $tl =$t ->LayTheLoaiTrongTin($idTin);
     <form class="comment_form margin_top_15" id="comment_form" method="post" action="">
         <input type="hidden" name="idTin" value="<?=$idTin?>">
         <fieldset class="column ">
-            <input class="text_input" id="name" name="name" type="text" required placeholder="Họ tên của bạn">
+            <input class="text_input" id="name" name="name" type="text" required placeholder="{name}">
             <p id="themname"></p>
         </fieldset>
         <fieldset class="column ">
-            <input class="text_input" id="email" name="email" type="text" required placeholder="Email của bạn">
+            <input class="text_input" id="email" name="email" type="text" required placeholder="{email}">
             <p id="thememail"></p>
         </fieldset>
 <!--        <fieldset class="column column_1_3">-->
 <!--            <input class="text_input" name="website" type="text" value="Website" placeholder="Website">-->
 <!--        </fieldset>-->
         <fieldset>
-            <textarea id="message" name="message" placeholder="Ý kiến của bạn"></textarea>
+            <textarea id="message" name="message" placeholder="{message}"></textarea>
             <p id="themykien"></p>
         </fieldset>
         <fieldset>
-            <button id="commentcheck" type="button"  class="more active">GỬI Ý KIẾN</button>
+            <button id="commentcheck" type="button"  class="more active">{GỬI Ý KIẾN}</button>
             <a href="#cancel" id="cancel_comment" title="Cancel reply">Cancel reply</a>
         </fieldset>
     </form>

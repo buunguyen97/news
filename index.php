@@ -121,8 +121,21 @@ $p=$_GET['p']; //đây là tham số
                             <?php } ?>
 						</div>
 						<div class="column column_1_3">
-                            <?php $idLT=12; require "tinmoitrongloai.php"?>
-                            <?php $idLT=3; require "tinmoitrongloai.php"?>
+							<?php if($lang == "vi"){
+								$idLT=12;		
+							}
+							else{
+								$idLT=52;
+							}
+							 require "tinmoitrongloai.php"?>
+							<?php 
+								 if($lang == "vi"){
+									$idLT=3;		
+								}
+								else{
+									$idLT=54;
+								}
+							require "tinmoitrongloai.php"?>
 
 
 							<h4 class="box_header page_margin_top_section">{Ban_Xem_Chua}</h4>
@@ -182,7 +195,7 @@ $p=$_GET['p']; //đây là tham số
 							</ul>
 						</div>
 						<div class="column column_1_4">
-							<a class="scroll_top" href="#top" title="Lên đầu trang">Đầu trang</a>
+							<a class="scroll_top" href="#top" title="Lên đầu trang">{Đầu trang}</a>
 						</div>
 					</div>
 
@@ -228,5 +241,12 @@ $str = str_replace("{Ve_Chung_Toi}",VE_CHUNG_TOI, $str);
 $str = str_replace("{{Liên hệ với chúng tôi qua các kênh}}",LHCK, $str);
 $str = str_replace("{Tomtat}",TOMTAT, $str);
 $str = str_replace("{DiaChi}",DIACHI, $str);
+$str = str_replace("{Đầu trang}",DAUTRANG, $str);
+$str = str_replace("{Tin tiếp theo}",TTT, $str);
+$str = str_replace("{Ý kiến bạn đọc}",YKBD, $str);
+$str = str_replace("{GỬI Ý KIẾN}",GYK, $str);
+$str = str_replace("{name}",NAME, $str);
+$str = str_replace("{email}",EMAIL, $str);
+$str = str_replace("{message}",MESS, $str);
 echo $str;
 ?>

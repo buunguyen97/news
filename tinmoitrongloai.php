@@ -7,12 +7,12 @@ $row=$kq -> fetch_assoc();
 <h4 class="box_header"><?=$tenLT?></h4>
 <ul class="blog small_margin clearfix">
     <li class="post tinmoinhattrongloai">
-        <a href="bv/<?=$row['TieuDe_KhongDau'];?>.html" title="The Public Health Crisis Hiding in Our Food">
+        <a href="bv/<?=$row['TieuDe_KhongDau'];?>.html" title="<?=$row['TieuDe']?>">
             <img src='<?=$row['urlHinh']?> ' alt='img' onerror="this.src='/news/defaultImg.jpg'">
         </a>
         <div class="post_content">
             <h5>
-                <a href="bv/<?=$row['TieuDe_KhongDau'];?>.html" title="The Public Health Crisis Hiding in Our Food"><?=$row['TieuDe']?> </a>
+                <a href="bv/<?=$row['TieuDe_KhongDau'];?>.html" title="<?=$row['TieuDe']?>"><?=$row['TieuDe']?> </a>
             </h5>
 
         </div>

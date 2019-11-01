@@ -51,14 +51,15 @@
                     <li>
                         <a href="bv/<?=$row['TieuDe_KhongDau'];?>.html" title=""><?=$row['TieuDe']?></a>
                     </li>
-                    <?php }?>
+                   <?php }?>
                 </ul>
             </li>
+        
             <li class="date">
-                <abbr title="04 Apr 2014" class="timeago current">04 Apr 2014</abbr>
-                <abbr title="04 May 2014" class="timeago">04 May 2014</abbr>
-                <abbr title="04 June 2014" class="timeago">04 June 2014</abbr>
+            
+                <abbr title="04 Apr 2014" class="timeago current"><?=$row['Ngay']?></abbr>
             </li>
+            
         </ul>
     </div>
 </div>

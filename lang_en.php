@@ -14,6 +14,14 @@ define("VE_CHUNG_TOI","About us");
 define("LHCK","Contact us via channels");
 define("TOMTAT","Daily news hourly, all fields, all kinds of upper yellow bran panic bran, quickly synthesized, all over the region.");
 define("DIACHI","Address");
+define("DAUTRANG","Top");
+define("TTT","Next news");
+define("YKBD","Comments reader");
+define("GYK","Submit comments");
+define("NAME","Yours name");
+define("EMAIL","Yours Email");
+define("MESS","Yours comment");
+
 
 
 
