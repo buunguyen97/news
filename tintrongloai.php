@@ -52,7 +52,8 @@ $kq = $t->TinTrongLoai($idLT ,$pageNum, $pageSize,$totalRows ); //chỉ lấy 1 
         <div class="post_content">
             <h2 class="with_number">
                 <a href="bv/<?=$row['TieuDe_KhongDau'];?>.html" title="<?=$row['TieuDe']?> "><?=$row['TieuDe']?> </a>
-                <a class="comments_number" href="post.html#comments_list" title="2 comments">2<span class="arrow_comments"></span></a>
+                <?php $cmt= $t->LayCacYKienCua1Tin($row['idTin']); ?>
+                <a class="comments_number" href="bv/<?=$row['TieuDe_KhongDau'];?>.html" title="<?=$cmt->num_rows; ?> Binhf"><?=$cmt->num_rows; ?><span class="arrow_comments"></span></a>
             </h2>
             <ul class="post_details">
                 <li class="date">
@@ -81,10 +82,10 @@ $kq = $t->TinTrongLoai($idLT ,$pageNum, $pageSize,$totalRows ); //chỉ lấy 1 
     <?php //Hiện link tới trang đầu, trang trước?>
     <?php if ($pageNum>1) {?>
     <li>
-    <a href="index.php?p=cat&idLT=<?=$idLT?>">Đầu</a>
+    <a href="cat/<?=$Ten_KhongDau?>/">Đầu</a>
     </li>
     <li>
-    <a href="index.php?p=cat&idLT=<?=$idLT?>&pageNum=<?=$pagePrev?>">Trước</a>
+    <a href="cat/<?=$Ten_KhongDau?>/<?=$pagePrev?>/">Trước</a>
     </li>
     <?php } //if ($pageNum>1?>
 
@@ -92,11 +93,11 @@ $kq = $t->TinTrongLoai($idLT ,$pageNum, $pageSize,$totalRows ); //chỉ lấy 1 
     <?php for($j = $from; $j <= $to; $j++) {?>
     <?php if ($j!=$pageNum) {?> 
         <li>
-        <a href="index.php?p=cat&idLT=<?=$idLT?>&pageNum=<?=$j?>"><?=$j?></a>
+        <a href="cat/<?=$Ten_KhongDau?>/<?=$j?>/"><?=$j?></a>
         </li>
     <?php } else {?>
         <li  class="selected">
-        <a href="index.php?p=cat&idLT=<?=$idLT?>&pageNum=<?=$j?>"><?=$j?></a>
+        <a href="cat/<?=$Ten_KhongDau?>/<?=$j?>/"><?=$j?></a>
         </li>
     <?php } //if ($j?>   
     <?php } //for?>
@@ -105,10 +106,10 @@ $kq = $t->TinTrongLoai($idLT ,$pageNum, $pageSize,$totalRows ); //chỉ lấy 1 
     <?php //Hiện link tới trang trước, trang cuối?>
     <?php if ($pageNum<$totalPages) {?>
     <li>
-    <a href= "index.php?p=cat&idLT=<?=$idLT?>&pageNum=<?=$pageNext?>">Sau</a>
+    <a href= "cat/<?=$Ten_KhongDau?>/<?=$pageNext?>/">Sau</a>
     </li>
     <li>
-    <a href="index.php?p=cat&idLT=<?=$idLT?>&pageNum=<?=$totalPages?>">Cuối</a>
+    <a href="cat/<?=$Ten_KhongDau?>/<?=$totalPages?>/">Cuối</a>
     </li>
     <?php } //if ($pageNum<$totalPages) ?>
 
