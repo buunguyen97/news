@@ -68,11 +68,7 @@ if (isset($_POST['TieuDe'])){
 
                         </div>
                     </div>
-                    <div class="form-group form-float">
-                        <div class="form-line">
-                            <input type="text" name="urlHinh" id="urlHinh" class="form-control" onclick="selectFileWithCKFinder('urlHinh')" placeholder="Địa chỉ hình của tin" >
-                        </div>
-                    </div>
+
                     <div class="row cleafix">
                         <div class="col-md-4">
                             <div class="form-group form-float">
